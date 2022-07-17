@@ -4,7 +4,7 @@ import logowhite from '../../imgs/logowhite.svg';
 
 const Box = styled.div`
   width: 100%;
-  height: 354px;
+  height: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -14,9 +14,8 @@ const Box = styled.div`
 const Logo = styled.img.attrs({
   src: logowhite,
 })`
-  width: 124px;
-  height: 60px;
-  padding: 10px 10px;
+  width: 6.5vw;
+  padding-top: 3vw;
 `;
 
 const Info = styled.div`
@@ -25,17 +24,18 @@ const Info = styled.div`
   color: white;
   padding-left: 50px;
   line-height: 200%;
-  font-size: 14px;
+  font-size: 1vw;
+  padding-bottom: 3vw;
 `;
 
 const Connact = styled.div`
   justify-content: center;
   align-items: center;
   color: white;
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-left: 7vw;
+  padding-right: 7vw;
   line-height: 200%;
-  font-size: 14px;
+  font-size: 1vw;
   border-left: 0.5px solid #d9d9d9;
   text-decoration: underline;
   cursor: pointer;

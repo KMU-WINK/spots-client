@@ -5,7 +5,6 @@ import login from '../../imgs/login.svg';
 
 const Box = styled.div`
   width: 100%;
-  height: 80px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -14,36 +13,33 @@ const Box = styled.div`
 const Logo = styled.img.attrs({
   src: logoblack,
 })`
-  width: 124px;
-  height: 60px;
-  padding: 10px 10px;
+  width: 6.5vw;
+  padding: 1vw 1vw;
 `;
 
 const RegistBox = styled.div`
   display: flex;
-  padding: 10px 10px;
-  justify-content: space-between;
+  padding: 1vw;
+  font-size: 1vw;
+  justify-content: center;
   align-items: center;
 `;
 
 const Login = styled.div`
   cursor: pointer;
-  font-size: 16px;
-  padding: 5px 5px;
+  padding: 1vw;
 `;
 
 const SignUp = styled.div`
   cursor: pointer;
-  font-size: 16px;
-  padding: 5px 5px;
+  padding: 1vw;
 `;
 
 const Loginimg = styled.img.attrs({
   src: login,
 })`
-  width: 24px;
-  height: 24px;
-  padding: 10px 10px;
+  width: 1.5vw;
+  padding: 1vw;
 `;
 
 const HeaderBox = () => (
