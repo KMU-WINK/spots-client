@@ -1,58 +1,50 @@
 import React, { Component } from 'react';
-import StyledSlider from './styles';
+import * as styled from './styles';
+
+const items = [
+  { id: 1, url: 'src/imgs/Rectangle 1890.svg' },
+  { id: 2, url: 'src/imgs/Rectangle 1891.svg' },
+  { id: 2, url: 'src/imgs/Rectangle 1892.svg' },
+  { id: 2, url: 'src/imgs/Rectangle 1894.svg' },
+];
 
 const Banner = () => {
   const settings = {
     dots: true,
     infinite: true,
     speed: 1000,
-    autoplay: true,
+    //autoplay: true,
     autoplayspeed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
     pauseOnHover: true,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
   };
-
   return (
-    <StyledSlider {...settings}>
-      <div>
-        <h3>1</h3>
-      </div>
-      <div>
-        <h3>2</h3>
-      </div>
-      <div>
-        <h3>3</h3>
-      </div>
-      <div>
-        <h3>4</h3>
-      </div>
-    </StyledSlider>
+    <styled.StyledSlider {...settings}>
+      {items.map(item => {
+        return (
+          <div key={item.id}>
+            <styled.ImageContainer>
+              <styled.BannerText>
+                <styled.BannerText1>
+                  운동친구 구하는 사람 주목!
+                </styled.BannerText1>
+                <styled.BannerText2>
+                  <div>가장 쉽고 빠른 </div>
+                  <div>운동메이트 매칭 플랫폼,</div>
+                </styled.BannerText2>
+                <div>
+                  <styled.BannerBtn>모임만들기</styled.BannerBtn>
+                </div>
+              </styled.BannerText>
+              <styled.BannerLogo />
+              <styled.Image src={item.url} />
+            </styled.ImageContainer>
+          </div>
+        );
+      })}
+    </styled.StyledSlider>
   );
 };
-
-function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: 'block', background: 'red' }}
-      onClick={onClick}
-    />
-  );
-}
-
-function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: 'block', background: 'green' }}
-      onClick={onClick}
-    />
-  );
-}
 
 export default Banner;
