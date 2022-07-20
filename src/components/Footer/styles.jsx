@@ -34,6 +34,8 @@ const Connact = styled.div`
   color: white;
   padding-left: 7vw;
   padding-right: 7vw;
+  padding-top: 2vw;
+  padding-bottom: 2vw;
   line-height: 200%;
   font-size: 1vw;
   border-left: 0.5px solid #d9d9d9;
