@@ -9,8 +9,6 @@ export const StyledSlider = styled(Slider)`
     height: 24vw;
   }
 
-  .slick-slide div {
-  }
   .slick-dots {
     width: 100%;
     bottom: 1vw;
