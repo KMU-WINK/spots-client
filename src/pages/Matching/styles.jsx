@@ -5,6 +5,9 @@ import people from '../../imgs/icon-user-two-mono.svg';
 import place from '../../imgs/place.svg';
 import background from '../../imgs/Rectangle 1887.svg';
 
+import iconStar_Rated from '../../imgs/icon-star-rated.svg';
+import iconStar_Empty from '../../imgs/icon-star-empty.svg';
+
 const Text = styled.div`
   font-family: 'Pretendard';
   font-style: normal;
@@ -28,8 +31,13 @@ export const Text3 = styled(Text)`
 export const HostBoldText = styled(Text)`
   font-weight: 800;
   font-size: 1vw;
+  height: 1vw;
 
   margin-top: 1vw;
+
+  display: flex;
+  
+  align-items: center;
 `;
 
 export const HostLightText = styled(Text)`
@@ -92,6 +100,8 @@ export const Member = styled(FlexBox)`
   margin-bottom: 1.25vw;
 `;
 
+export const MemberText = styled(Text2)``;
+
 export const TimeContent = styled(FlexBox)`
   margin-top: 1.5vw;
   margin-bottom: 1.25vw;
@@ -129,6 +139,8 @@ export const SideBar = styled.div`
   width: 19.6vw;
   height: 30vw;
   overflow: hidden;
+
+  padding: 1.56vw;
 
   background: #ffffff;
 
@@ -168,7 +180,7 @@ const Icon = styled.img`
   margin-right: 0.4vw;
 `;
 
-export const Button = styled(Icon).attrs({
+export const MenuButton = styled(Icon).attrs({
   src: `${arrow}`,
 })`
   cursor: pointer;
@@ -186,10 +198,7 @@ export const People = styled(Icon).attrs({
   src: `${people}`,
 })``;
 
-export const Progress = styled.progress.attrs({
-  value: 2,
-  max: 4,
-})`
+export const Progress = styled.progress`
   appearance: none;
   width: 100%;
   height: 1.35vw;
@@ -204,4 +213,63 @@ export const Progress = styled.progress.attrs({
     border: 1px solid #d3d3d3;
     border-radius: 15px;
   }
+`;
+
+// 호스트 Star Rating
+export const StarRating = styled.div`
+  position: relative;
+  width: max-content;
+  margin-left: 1.2vw;
+`;
+
+export const StarRated = styled.div`
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  width: 50%;
+  overflow: hidden;
+`;
+
+export const StarEmpty = styled.div`
+  width: 100%
+  z-index: 0;
+
+`;
+
+export const iconStarRated = styled(Icon).attrs({
+  src: `${iconStar_Rated}`,
+})``;
+
+export const iconStarEmpty = styled(Icon).attrs({
+  src: `${iconStar_Empty}`,
+})``;
+
+
+const Button = styled(Text)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 0.625vw;
+  background: #fb1e53;
+  color: white;
+  font-size: 1.25vw;
+
+  cursor: pointer;
+`;
+
+export const ContactButton = styled(Button)`
+  margin-top: 1.5vw;
+
+  font-weight: 700;
+
+  padding-top: 0.8vw;
+  padding-bottom: 0.8vw;
+  width: 13.22vw;
+`;
+
+export const MatchingButton = styled(Button)`
+  font-weight: 400;
+
+  width: 16.25vw;
 `;

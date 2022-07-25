@@ -7,10 +7,51 @@ const MatchingPage = () => {
   const [isShowHost, setIsShowHost] = useState(false);
   const [isShowCondition, setIsShowCondition] = useState(false);
 
+  const currentMember = 2;
+  const maxMember = 4;
+
   // "호스트 소개" 펼쳤을 때
   const HostContents = () => (
     <>
-      <styled.HostBoldText>호스트 평점</styled.HostBoldText>
+      <styled.HostBoldText>
+        호스트 평점
+        <styled.StarRating>
+          <styled.StarRated>
+            <span>
+              <styled.iconStarRated />
+            </span>
+            <span>
+              <styled.iconStarRated />
+            </span>
+            <span>
+              <styled.iconStarRated />
+            </span>
+            <span>
+              <styled.iconStarRated />
+            </span>
+            <span>
+              <styled.iconStarRated />
+            </span>
+          </styled.StarRated>
+          <styled.StarEmpty>
+            <span>
+              <styled.iconStarEmpty />
+            </span>
+            <span>
+              <styled.iconStarEmpty />
+            </span>
+            <span>
+              <styled.iconStarEmpty />
+            </span>
+            <span>
+              <styled.iconStarEmpty />
+            </span>
+            <span>
+              <styled.iconStarEmpty />
+            </span>
+          </styled.StarEmpty>
+        </styled.StarRating>
+      </styled.HostBoldText>
       <styled.HostBoldText>호스트 응답률</styled.HostBoldText>
       <styled.HostBoldText>호스트 소개글</styled.HostBoldText>
       <styled.HostLightText>
@@ -20,6 +61,7 @@ const MatchingPage = () => {
       </styled.HostLightText>
       <styled.HostBoldText>호스트가 선호하는 운동</styled.HostBoldText>
       <styled.HostBoldText>호스트 보유 뱃지</styled.HostBoldText>
+      <styled.ContactButton>호스트에게 연락하기</styled.ContactButton>
     </>
   );
 
@@ -47,9 +89,11 @@ const MatchingPage = () => {
 
             <styled.Member>
               <styled.People />
-              <styled.Text2>현재 인원 (2/4)</styled.Text2>
+              <styled.MemberText>
+                현재 인원 ({currentMember}/{maxMember})
+              </styled.MemberText>
             </styled.Member>
-            <styled.Progress />
+            <styled.Progress value={currentMember} max={maxMember} />
           </styled.Container>
 
           <styled.Container>
@@ -71,7 +115,7 @@ const MatchingPage = () => {
           <styled.Container>
             <styled.DropdownTitle>
               <styled.Text1>매칭 조건</styled.Text1>
-              <styled.Button
+              <styled.MenuButton
                 onClick={() => setIsShowCondition(!isShowCondition)}
               />
             </styled.DropdownTitle>
@@ -82,7 +126,7 @@ const MatchingPage = () => {
           <styled.Container>
             <styled.DropdownTitle>
               <styled.Text1>호스트 소개</styled.Text1>
-              <styled.Button onClick={() => setIsShowHost(!isShowHost)} />
+              <styled.MenuButton onClick={() => setIsShowHost(!isShowHost)} />
             </styled.DropdownTitle>
 
             {isShowHost ? <HostContents /> : null}
@@ -98,6 +142,12 @@ const MatchingPage = () => {
           </styled.SideBarTitle>
 
           <ConditionContents />
+
+          <styled.Member>
+            <styled.People />
+            <styled.MemberText>현재 인원 (2/4)</styled.MemberText>
+          </styled.Member>
+          <styled.Progress value={currentMember} max={maxMember} />
         </styled.SideBar>
       </styled.MatchingPageBox>
       <Footer />
