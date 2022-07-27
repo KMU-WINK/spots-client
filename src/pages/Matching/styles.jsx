@@ -36,7 +36,7 @@ export const HostBoldText = styled(Text)`
   margin-top: 1vw;
 
   display: flex;
-  
+
   align-items: center;
 `;
 
@@ -56,6 +56,12 @@ export const Text7 = styled(Text)`
   font-weight: 400;
   font-size: 1vw;
 `;
+
+export const CostBoldText = styled(Text7)`
+  font-weight: 700;
+`;
+
+export const CostLightText = styled(Text7)``;
 
 export const Label = styled(Text)`
   display: flex;
@@ -80,6 +86,7 @@ export const Label = styled(Text)`
 
 export const Labels = styled.div`
   display: flex;
+  white-space: nowrap;
 
   ${Label}:not(:last-of-type) {
     margin-right: 1vw;
@@ -131,38 +138,39 @@ export const DropdownTitle = styled(FlexBox)`
   justify-content: space-between;
 `;
 
-export const SideBar = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  width: 19.6vw;
-  height: 30vw;
-  overflow: hidden;
-
-  padding: 1.56vw;
-
+export const QuickMenu = styled.div`
   background: #ffffff;
 
   box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.25);
   border-radius: 12px;
 
+  overflow: hidden;
+  margin-top: 1.5vw;
+
+  align-self: flex-start;
   position: -webkit-sticky;
   position: sticky;
+  top: 0;
 `;
 
-export const SideBarTitle = styled.div`
-  width: 100%;
-  background-color: #f6f6f6;
+export const QuickMenuTitle = styled.div`
+  width: 19.8vw;
+  padding: 1.55vw 1.55vw 1vw 1.55vw;
 
-  div:not(:last-of-type) {
-    margin-left: 0.4vw;
-  }
+  background-color: #f6f6f6;
+`;
+
+export const QuickMenuContent = styled.div`
+  width: 19.6vw;
+  padding: 0.8vw 1.65vw 2.35vw 1.65vw;
+
+  border-radius: 0px;
 `;
 
 export const MatchingPageBox = styled.div`
   display: flex;
   justify-content: center;
+  height: auto;
 `;
 
 export const Box1 = styled.div`
@@ -233,7 +241,6 @@ export const StarRated = styled.div`
 export const StarEmpty = styled.div`
   width: 100%
   z-index: 0;
-
 `;
 
 export const iconStarRated = styled(Icon).attrs({
@@ -244,11 +251,12 @@ export const iconStarEmpty = styled(Icon).attrs({
   src: `${iconStar_Empty}`,
 })``;
 
-
 const Button = styled(Text)`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  font-weight: 700;
 
   border-radius: 0.625vw;
   background: #fb1e53;
@@ -260,16 +268,13 @@ const Button = styled(Text)`
 
 export const ContactButton = styled(Button)`
   margin-top: 1.5vw;
-
-  font-weight: 700;
-
   padding-top: 0.8vw;
   padding-bottom: 0.8vw;
   width: 13.22vw;
 `;
 
 export const MatchingButton = styled(Button)`
-  font-weight: 400;
-
-  width: 16.25vw;
+  width: 100%;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
 `;

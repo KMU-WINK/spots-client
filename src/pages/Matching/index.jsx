@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import * as styled from './styles';
+import $ from 'jquery';
 
 const MatchingPage = () => {
   const [isShowHost, setIsShowHost] = useState(false);
@@ -9,6 +10,22 @@ const MatchingPage = () => {
 
   const currentMember = 2;
   const maxMember = 4;
+
+  // QuickMenu 따라오기
+  const quickBox = $('.quickBox');
+  const quickTop = 0;
+
+  quickBox.css('top', $(window).height());
+  $(function () {
+    quickBox.animate({ top: $(document).scrollTop() + quickTop + 'px' }, 1000);
+    $(window).on('scroll', function () {
+      quickBox.stop();
+      quickBox.animate(
+        { top: $(document).scrollTop() + quickTop + 'px' },
+        1000,
+      );
+    });
+  });
 
   // "호스트 소개" 펼쳤을 때
   const HostContents = () => (
@@ -133,22 +150,32 @@ const MatchingPage = () => {
           </styled.Container>
         </styled.Box1>
 
-        <styled.SideBar>
-          <styled.SideBarTitle>
+        <styled.QuickMenu className="quickBox">
+          <styled.QuickMenuTitle>
             <styled.FlexBox>
               <styled.Watch />
               <styled.Text3>22년 07월 08일 17:00</styled.Text3>
             </styled.FlexBox>
-          </styled.SideBarTitle>
+            <styled.LocationContent>
+              <styled.Place />
+              <styled.Text6>성북구 솔샘로 44 정릉생활관</styled.Text6>
+            </styled.LocationContent>
+          </styled.QuickMenuTitle>
 
-          <ConditionContents />
+          <styled.QuickMenuContent>
+            <ConditionContents />
 
-          <styled.Member>
-            <styled.People />
-            <styled.MemberText>현재 인원 (2/4)</styled.MemberText>
-          </styled.Member>
-          <styled.Progress value={currentMember} max={maxMember} />
-        </styled.SideBar>
+            <styled.CostLightText>예상 비용</styled.CostLightText>
+            <styled.CostBoldText>10,000원</styled.CostBoldText>
+            <styled.Member>
+              <styled.People />
+              <styled.MemberText>현재 인원 (2/4)</styled.MemberText>
+            </styled.Member>
+            <styled.Progress value={currentMember} max={maxMember} />
+
+            <styled.MatchingButton>매칭 신청하기</styled.MatchingButton>
+          </styled.QuickMenuContent>
+        </styled.QuickMenu>
       </styled.MatchingPageBox>
       <Footer />
     </>
