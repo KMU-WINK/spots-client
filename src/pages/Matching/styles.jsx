@@ -5,8 +5,8 @@ import people from '../../imgs/icon-user-two-mono.svg';
 import place from '../../imgs/place.svg';
 import background from '../../imgs/Rectangle 1887.svg';
 
-import iconStar_Rated from '../../imgs/icon-star-rated.svg';
-import iconStar_Empty from '../../imgs/icon-star-empty.svg';
+import svgStarRated from '../../imgs/icon-star-rated.svg';
+import svgStarEmpty from '../../imgs/icon-star-empty.svg';
 
 const Text = styled.div`
   font-family: 'Pretendard';
@@ -244,11 +244,11 @@ export const StarEmpty = styled.div`
 `;
 
 export const iconStarRated = styled(Icon).attrs({
-  src: `${iconStar_Rated}`,
+  src: `${svgStarRated}`,
 })``;
 
 export const iconStarEmpty = styled(Icon).attrs({
-  src: `${iconStar_Empty}`,
+  src: `${svgStarEmpty}`,
 })``;
 
 const Button = styled(Text)`
