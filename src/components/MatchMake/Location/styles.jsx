@@ -26,3 +26,29 @@ export const LocationText = styled.p`
     font-style: normal;
     line-height: 1.6vw;
 `
+
+export const PlaceInform = styled.div`
+    display : flex;
+
+`
+
+export const Place = styled.img.attrs({
+    src: place,
+  })`
+    width: 1.25vw;
+    height: 1.25vw;
+`;
+
+export const PlaceText = styled.p`
+    font-size : 1vw;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.1vw;
+`
+
+export const address = styled.p`
+    font-size : 0.8vw;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 0.9vw;
+`

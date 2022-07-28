@@ -4,17 +4,22 @@ import prevArrowInvalid from '../../../imgs/MatchMake/prevArrowInvalid.svg';
 import nextArrowValid from '../../../imgs/MatchMake/nextArrowValid.svg';
 import watch from '../../../imgs/MatchMake/watch.svg';
 
+export const DateContainer = styled.div`
+  width: 60%;
+  height: 19.5vw;
+  display : flex;
+  align-items: center;
+  justify-content : center;
+  box-shadow: 0px 4px 24px -1px rgba(0,0,0,0.25);
+  border-radius: 12px;
+  margin-top : 2vw;
+`
+
 export const DateBox = styled.div`
-    width: 60%;
-    height: 19.5vw;
+    width : 90%;
+    height : 80%;
     display : flex;
     flex-direction : column;
-    // align-items: center;
-    // justify-content : space-evenly;
-    background-color : white;
-    box-shadow: 0px 4px 24px -1px rgba(0,0,0,0.25);
-    border-radius: 12px;
-    margin-top : 1.4vw;
 `;
 
 export const DateText = styled.p`
@@ -22,7 +27,6 @@ export const DateText = styled.p`
     font-weight: 700;
     font-style: normal;
     line-height: 1.6vw;
-    margin-left : 5%;
 `
 
 export const DateInform = styled.p`
@@ -30,13 +34,11 @@ export const DateInform = styled.p`
     font-weight: 500;
     font-style: normal;
     line-height: 0.9vw;
-    margin-left : 5%;
 `
 
 export const DateTime = styled.div`
     display : flex;
     align-items: center;
-    margin-left : 5%;
 `;
 
 export const CalendarCheck = styled.img.attrs({
@@ -55,8 +57,6 @@ export const DateTimeText = styled.p`
 export const CalendarBox = styled.div`
     display : flex;
     height : 9.5vw;
-    width : 90%;
-    margin-left : 5%;
     justify-content : space-between;
 `;
 
@@ -76,14 +76,11 @@ export const NextArrowValid = styled.img.attrs({
 
 
 export const Horizon = styled.hr`
-  width : 90%;
-  margin-left : 5%;
 `;
 
 export const TimeBox = styled.div`
   display : flex;
   align-items : center;
-  margin-left : 5%;
 `
 
 export const Watch = styled.img.attrs({
@@ -102,7 +99,6 @@ export const TimeText = styled.p`
 export const TimeGetBox = styled.div`
   display : flex;
   height : 15%;
-  margin-left : 5%;
   align-items : center;
 `
 
