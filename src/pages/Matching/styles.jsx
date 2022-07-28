@@ -8,6 +8,15 @@ import background from '../../imgs/Rectangle 1887.svg';
 import svgStarRated from '../../imgs/icon-star-rated.svg';
 import svgStarEmpty from '../../imgs/icon-star-empty.svg';
 
+export const FlexBox = styled.div`
+  display: flex;
+  align-items: center;
+
+  div:not(:last-of-type) {
+    margin-right: 1vw;
+  }
+`;
+
 const Text = styled.div`
   font-family: 'Pretendard';
   font-style: normal;
@@ -57,6 +66,14 @@ export const Text7 = styled(Text)`
   font-size: 1vw;
 `;
 
+export const Cost = styled(FlexBox)`
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+
+  border-bottom: 1px solid;
+  border-color: #d3d3d3;
+`;
+
 export const CostBoldText = styled(Text7)`
   font-weight: 700;
 `;
@@ -89,15 +106,6 @@ export const Labels = styled.div`
   white-space: nowrap;
 
   ${Label}:not(:last-of-type) {
-    margin-right: 1vw;
-  }
-`;
-
-export const FlexBox = styled.div`
-  display: flex;
-  align-items: center;
-
-  div:not(:last-of-type) {
     margin-right: 1vw;
   }
 `;
@@ -275,6 +283,9 @@ export const ContactButton = styled(Button)`
 
 export const MatchingButton = styled(Button)`
   width: 100%;
+
+  margin-top: 2.23vw;
+
   padding-top: 1vw;
   padding-bottom: 1vw;
 `;

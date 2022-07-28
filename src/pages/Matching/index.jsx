@@ -13,7 +13,7 @@ const MatchingPage = () => {
 
   // QuickMenu 따라오기
   const quickBox = $('.quickBox');
-  const quickTop = 0;
+  const quickTop = 30;
 
   quickBox.css('top', $(window).height());
   $(function () {
@@ -165,8 +165,11 @@ const MatchingPage = () => {
           <styled.QuickMenuContent>
             <ConditionContents />
 
-            <styled.CostLightText>예상 비용</styled.CostLightText>
-            <styled.CostBoldText>10,000원</styled.CostBoldText>
+            <styled.Cost>
+              <styled.CostLightText>예상 비용</styled.CostLightText>
+              <styled.CostBoldText>10,000원</styled.CostBoldText>
+            </styled.Cost>
+
             <styled.Member>
               <styled.People />
               <styled.MemberText>현재 인원 (2/4)</styled.MemberText>
