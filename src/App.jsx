@@ -1,5 +1,6 @@
 import React from 'react';
 import MainPage from './pages/Main';
+import MakePage from './pages/Make';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 const App = () => {
@@ -7,6 +8,7 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<MainPage />} />
+        <Route path="/matching/make" element={<MakePage />} />
       </Routes>
     </BrowserRouter>
   );
