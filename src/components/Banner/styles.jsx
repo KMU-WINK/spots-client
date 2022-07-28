@@ -3,6 +3,8 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import logowhite from '../../imgs/logowhite.svg';
+import prevarrowwhite from '../../imgs/prevarrowwhite.svg';
+import nextarrowwhite from '../../imgs/nextarrowwhite.svg';
 
 export const StyledSlider = styled(Slider)`
   .slick-list {
@@ -17,6 +19,43 @@ export const StyledSlider = styled(Slider)`
     color: white;
     font-size: 0.5vw;
   }
+
+  .slick-arrow {
+    display: flex;
+    z-index: 10;
+    width: 1vw;
+    height: 1vw;
+  }
+
+  .slick-prev {
+    left: 2vw;
+    cursor: pointer;
+    &::before {
+      content: '';
+    }
+  }
+
+  .slick-next {
+    right: 2vw;
+    cursor: pointer;
+    &::before {
+      content: '';
+    }
+  }
+`;
+
+export const ImproptuPrevArrow = styled.img.attrs({
+  src: prevarrowwhite,
+})`
+  width: 1.25vw;
+  height: 1.25vw;
+`;
+
+export const ImproptuNextArrow = styled.img.attrs({
+  src: nextarrowwhite,
+})`
+  width: 1.25vw;
+  height: 1.25vw;
 `;
 
 export const Image = styled.img`

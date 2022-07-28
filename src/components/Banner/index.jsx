@@ -8,6 +8,24 @@ const items = [
   { id: 2, url: 'src/imgs/Rectangle 1894.svg' },
 ];
 
+function NextArrow(props) {
+  const { className, onClick } = props;
+  return (
+    <div className={className} onClick={onClick}>
+      <styled.ImproptuNextArrow />
+    </div>
+  );
+}
+
+function PrevArrow(props) {
+  const { className, onClick } = props;
+  return (
+    <div className={className} onClick={onClick}>
+      <styled.ImproptuPrevArrow />
+    </div>
+  );
+}
+
 const Banner = () => {
   const settings = {
     dots: true,
@@ -18,6 +36,9 @@ const Banner = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     pauseOnHover: true,
+    arrows: true,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
   };
   return (
     <styled.StyledSlider {...settings}>

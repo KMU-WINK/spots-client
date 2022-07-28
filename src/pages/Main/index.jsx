@@ -5,6 +5,7 @@ import Footer from '../../components/Footer';
 import Banner from '../../components/Banner';
 import Menu from '../../components/Menu';
 import Impromptu from '../../components/Impromptu';
+import MatchList from '../../components/MatchList';
 
 const MainPage = () => {
   return (
@@ -13,7 +14,7 @@ const MainPage = () => {
       <Banner />
       <Menu />
       <Impromptu />
-      <main>메인 내용</main>
+      <MatchList />
       <Footer />
     </styled.MainContainer>
   );
