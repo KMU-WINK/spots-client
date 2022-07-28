@@ -156,8 +156,6 @@ const MatchList = () => {
             <styled.MatchNumber>인원 (1/5)</styled.MatchNumber>
           </styled.MatchStatus>
         </styled.MatchLists>
-      </styled.MatchListContainer>
-      <styled.MatchListContainer>
         <styled.MatchLists>
           <styled.MatchName>모임 이름</styled.MatchName>
           <styled.MatchDate>07.08/17:00</styled.MatchDate>
@@ -185,8 +183,6 @@ const MatchList = () => {
             <styled.MatchNumber>인원 (1/5)</styled.MatchNumber>
           </styled.MatchStatus>
         </styled.MatchLists>
-      </styled.MatchListContainer>
-      <styled.MatchListContainer>
         <styled.MatchLists>
           <styled.MatchName>모임 이름</styled.MatchName>
           <styled.MatchDate>07.08/17:00</styled.MatchDate>

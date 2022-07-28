@@ -7,28 +7,30 @@ import prevarrowwhite from '../../imgs/prevarrowwhite.svg';
 import nextarrowwhite from '../../imgs/nextarrowwhite.svg';
 
 export const StyledSlider = styled(Slider)`
+  width: 100%;
+  max-width: 1920px;
   .slick-list {
-    height: 24vw;
+    height: 465px;
   }
 
   .slick-dots {
     width: 100%;
-    bottom: 1vw;
+    bottom: 23px;
   }
   .slick-dots li button:before {
     color: white;
-    font-size: 0.5vw;
+    font-size: 10px;
   }
 
   .slick-arrow {
     display: flex;
     z-index: 10;
-    width: 1vw;
-    height: 1vw;
+    width: 20px;
+    height: 14px;
   }
 
   .slick-prev {
-    left: 2vw;
+    left: 40px;
     cursor: pointer;
     &::before {
       content: '';
@@ -36,7 +38,7 @@ export const StyledSlider = styled(Slider)`
   }
 
   .slick-next {
-    right: 2vw;
+    right: 40px;
     cursor: pointer;
     &::before {
       content: '';
@@ -47,64 +49,63 @@ export const StyledSlider = styled(Slider)`
 export const ImproptuPrevArrow = styled.img.attrs({
   src: prevarrowwhite,
 })`
-  width: 1.25vw;
-  height: 1.25vw;
+  width: 20px;
+  height: 14px;
 `;
 
 export const ImproptuNextArrow = styled.img.attrs({
   src: nextarrowwhite,
 })`
-  width: 1.25vw;
-  height: 1.25vw;
+  width: 20px;
+  height: 14px;
 `;
 
-export const Image = styled.img`
-  max-width: 100%;
-  max-height: 100%;
-`;
+export const Image = styled.img``;
 
 export const ImageContainer = styled.div`
   position: relative;
+  width: 100%;
+  height: 100%;
 `;
 
 export const BannerText = styled.div`
   position: absolute;
-  left: 20vw;
-  top: 4vw;
+  padding-left: 20%;
+  padding-top: 5%;
   color: white;
 `;
 
 export const BannerText1 = styled.div`
-  font-size: 1.5vw;
-  padding: 0.5vw;
+  font-size: 24px;
+  margin-bottom: 24px;
 `;
 
 export const BannerText2 = styled.div`
-  font-size: 3vw;
-  padding: 0.5vw;
+  font-size: 50px;
+  margin-bottom: 36px;
   font-weight: 700;
 `;
 export const BannerLogo = styled.img.attrs({
   src: logowhite,
 })`
   position: absolute;
-  width: 20vw;
-  left: 57vw;
-  top: 13vw;
+  width: 395px;
+  right: 10%;
+  top: 287px;
 `;
 
 export const BannerBtn = styled.button`
-  width: 10vw;
-  height: 2.5vw;
-  margin-left: 0.5vw;
-  margin-top: 1vw;
+  width: 176px;
+  height: 48px;
+  //margin-left: 0.5vw;
+  //margin-top: 1vw;
   background: #ffffff;
   border: 0;
   border-radius: 8px;
 
   font-family: 'Apple SD Gothic Neo';
   font-style: normal;
-  font-size: 1vw;
+  font-size: 20px;
   font-weight: 700;
   color: #333333;
   cursor: pointer;

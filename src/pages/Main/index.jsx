@@ -9,14 +9,16 @@ import MatchList from '../../components/MatchList';
 
 const MainPage = () => {
   return (
-    <styled.MainContainer>
+    <styled.Main>
       <Header />
       <Banner />
       <Menu />
       <Impromptu />
-      <MatchList />
+      <styled.MainContainer>
+        <MatchList />
+      </styled.MainContainer>
       <Footer />
-    </styled.MainContainer>
+    </styled.Main>
   );
 };
 

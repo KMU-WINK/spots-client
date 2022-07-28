@@ -8,66 +8,69 @@ import nextarrowblack from '../../imgs/nextarrowblack.svg';
 import meetingicon from '../../imgs/meetingicon.svg';
 
 export const Box = styled.div`
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background: #f6f6f6;
-  height: 22vw;
+  height: 440px;
+  width: 100%;
+  padding: 41px 0px 50px 0px;
+`;
+
+export const BoxContainer = styled.div`
+  width: 1250px;
 `;
 
 export const ImpromptuText = styled.div`
-  width: 60%;
-  margin-left: 20%;
-  padding: 1.5vw 0vw;
-
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 24px;
   font-style: normal;
   font-weight: 700;
-  font-size: 1.2vw;
-  line-height: 1.5vw;
+  font-size: 27px;
 `;
 
 export const ImpromptuImg = styled.img.attrs({
   src: impromptu,
 })`
-  position: relative;
-  width: 1.25vw;
-  height: 1.25vw;
-  top: 0.2vw;
+  width: 24px;
+  height: 24px;
+  margin-left: 4px;
 `;
 
 export const ImproptuPrevArrow = styled.img.attrs({
   src: prevarrowblack,
 })`
-  width: 1.25vw;
-  height: 1.25vw;
+  width: 20px;
+  height: 14px;
 `;
 
 export const ImproptuNextArrow = styled.img.attrs({
   src: nextarrowblack,
 })`
-  width: 1.25vw;
-  height: 1.25vw;
+  width: 20px;
+  height: 14px;
 `;
 
 export const StyledSlider = styled(Slider)`
-  margin-left: 19%;
-  width: 60%;
+  width: 100%;
   text-align: center;
 
   .slick-list {
     overflow: hidden;
-    height: 15.5vw;
-    text-align: center;
   }
 
   .slick-arrow {
     display: flex;
     z-index: 10;
-    width: 1vw;
-    height: 1vw;
+    width: 20px;
+    height: 14px;
   }
 
   .slick-prev {
-    left: -1.2vw;
     cursor: pointer;
     &::before {
       content: '';
@@ -75,7 +78,6 @@ export const StyledSlider = styled(Slider)`
   }
 
   .slick-next {
-    right: -1.1vw;
     cursor: pointer;
     &::before {
       content: '';
@@ -84,74 +86,69 @@ export const StyledSlider = styled(Slider)`
 `;
 
 export const MeetingBox = styled.div`
-  width: 16vw !important;
-  height: 13vw;
+  width: 378px !important;
   background: #333333;
-  border-radius: 0.625vw;
-
-  padding: 5%;
+  border-radius: 12px;
+  padding: 45px 0px 18px;
 `;
 
 export const MeetingName = styled.div`
   color: #ffffff;
-  font-size: 1.25vw;
+  font-size: 24px;
   font-weight: 700;
-  line-height: 1.3;
-  padding-top: 1.5vw;
+  margin-bottom: 12px;
 `;
 
 export const MeetingDate = styled.div`
   color: #fb1e53;
   font-family: 'SF Pro';
   font-weight: 700;
-  font-size: 1.8vw;
-  line-height: 3vw;
+  font-size: 36px;
   letter-spacing: -0.05em;
+  margin-bottom: 14px;
 `;
 
 export const MeetingPlace = styled.div`
   color: #ffffff;
   font-family: 'Apple SD Gothic Neo';
   font-weight: 400;
-  font-size: 1.5vw;
-  line-height: 1.8vw;
+  font-size: 30px;
   letter-spacing: -0.05em;
+  margin-bottom: 31px;
 `;
 
 export const MeetingStatus = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  padding-top: 1.5vw;
+  margin-bottom: 12px;
 `;
 
 export const MeetingIcon = styled.img.attrs({
   src: meetingicon,
 })`
-  width: 1.25vw;
-  height: 1.25vw;
+  width: 23px;
+  margin-right: 12px;
 `;
 
 export const MeetingBar = styled.div`
-  width: 14vw;
-  height: 1vw;
+  width: 271px;
+  height: 17px;
   background: #ffffff;
-  border-radius: 0.8vw;
+  border-radius: 15px;
 `;
 
 export const MeetingBarStatus = styled.div`
-  width: ${props => props.width};
-  height: 1vw;
+  width: ${props => props?.width || '0px'};
+  height: 17px;
   background: #fb1e53;
-  border-radius: 0.8vw;
+  border-radius: 15px;
 `;
 
 export const MeetingNumber = styled.div`
   color: #ffffff;
   font-family: 'SF Pro';
   font-weight: 700;
-  font-size: 1.6vw;
-  line-height: 2vw;
+  font-size: 30px;
   letter-spacing: -0.05em;
-  padding-top: 0.5vw;
 `;

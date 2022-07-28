@@ -8,66 +8,64 @@ export const Container = styled.div`
   height: 100%;
   justify-content: center;
   align-items: center;
-  padding-top: 3vw;
-  padding-bottom: 4vw;
-  padding-left: 20vw;
+  padding: 70px 0px 192px;
 `;
 
 export const MatchListText = styled.div`
+  display: flex;
+  align-items: center;
   font-family: 'Apple SD Gothic Neo';
   font-weight: 700;
-  font-size: 1.25vw;
-  line-height: 1.3vw;
-  padding: 1.25vw 0vw;
+  font-size: 24px;
+  margin-bottom: 24px;
 `;
 
 export const MatchListImg = styled.img.attrs({
   src: location,
 })`
-  position: relative;
-  width: 1.25vw;
-  height: 1.25vw;
-  top: 0.1vw;
+  width: 24px;
+  height: 24px;
+  margin-left: 11px;
 `;
 
 export const LocationContainer = styled.div`
   display: flex;
-  width: 60%;
+  width: 100%;
   height: 100%;
   justify-content: space-between;
+  margin-bottom: 13px;
 `;
 
 export const Locations = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 123px;
+  height: 50px;
   background: #ffffff;
   color: #d3d3d3;
 
   font-family: 'AppleSDGothicNeoR00';
-  width: 6.3vw;
-  height: 2.6vw;
-  font-size: 1vw;
-  line-height: 1.1vw;
+  font-size: 20px;
   cursor: pointer;
-  border-radius: 1.5vw;
-  border: 0.1vw solid #d3d3d3;
+  border-radius: 28px;
+  border: 2px solid #d3d3d3;
 `;
 
 export const FilterContainer = styled.div`
   display: flex;
-  width: 30%;
-  height: 100%;
+  width: 50%;
+  height: 37px;
   justify-content: space-between;
   align-items: center;
-  padding-top: 0.7vw;
+  margin-bottom: 25px;
 `;
 
 export const FilterImg = styled.img.attrs({
   src: filtericon,
 })`
-  width: 2vw;
-  height: 2vw;
+  width: 39px;
+  height: 39px;
 `;
 
 export const Filters = styled.button`
@@ -76,16 +74,15 @@ export const Filters = styled.button`
   align-items: center;
   background: #ffffff;
   color: #838383;
-  width: 4.6vw;
-  height: 1.9vw;
+  width: 89px;
+  height: 37px;
 
   font-family: 'Apple SD Gothic Neo';
   font-weight: 600;
-  font-size: 0.8vw;
-  line-height: 1px;
+  font-size: 16px;
   cursor: pointer;
-  border: 0.1vw solid #d9d9d9;
-  border-radius: 1.5vw;
+  border: 2px solid #d9d9d9;
+  border-radius: 28px;
 
   .clicked {
     background: green;
@@ -96,108 +93,100 @@ export const FilterDropContainer = styled.select`
   text-align: center;
   background: #ffffff;
   color: #838383;
-  width: 4.6vw;
-  height: 1.9vw;
+  width: 89px;
+  height: 37px;
 
   font-family: 'Apple SD Gothic Neo';
   font-weight: 600;
-  font-size: 0.8vw;
+  font-size: 16px;
   line-height: 1px;
   cursor: pointer;
-  border: 0.1vw solid #d9d9d9;
-  border-radius: 1.5vw;
+  border: 2px solid #d9d9d9;
+  border-radius: 28px;
 `;
 
 export const FilterDropObtions = styled.option``;
 
 export const MatchListContainer = styled.div`
-  display: flex;
-  width: 60%;
-  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 25px;
+  width: 100%;
   justify-content: space-around;
-  margin-left: -0.5vw;
-  padding-top: 1vw;
-  padding-bottom: 0.5vw;
+  margin-bottom: 77px;
 `;
 
 export const MatchLists = styled.div`
-  width: 15.6vw;
-  height: 15vw;
   background: #ffffff;
-  box-shadow: 0vw 0.2vw 1.25vw -0.05vw rgba(0, 0, 0, 0.25);
-  border-radius: 0.625vw;
-  padding-left: 2.4vw;
+  box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  padding-top: 44px;
+  padding-left: 47px;
+  padding-bottom: 45px;
   cursor: pointer;
 `;
 
 export const MatchName = styled.div`
   font-family: 'Apple SD Gothic Neo';
   font-weight: 700;
-  font-size: 1.25vw;
-  line-height: 1.5vw;
+  font-size: 24px;
   letter-spacing: -0.05em;
   color: #171717;
-  padding-top: 2.3vw;
+  margin-bottom: 12px;
 `;
 
 export const MatchDate = styled.div`
   font-family: 'SF Pro';
   font-weight: 700;
-  font-size: 1.9vw;
-  line-height: 2.2vw;
+  font-size: 24px;
   letter-spacing: -0.05em;
   color: #171717;
-  padding-top: 0.6vw;
+  margin-bottom: 13px;
 `;
 
 export const MatchPlace = styled.div`
   font-family: 'Apple SD Gothic Neo';
   font-style: normal;
   font-weight: 400;
-  font-size: 1.5vw;
-  line-height: 1.87vw;
+  font-size: 24px;
   letter-spacing: -0.05em;
   color: #171717;
-  padding-top: 0.7vw;
+  margin-bottom: 36px;
 `;
 
 export const MatchStatus = styled.div`
   display: flex;
   align-items: center;
-  padding-top: 1.82vw;
 `;
 
 export const MatchIcon = styled.img.attrs({
   src: meetingicon,
 })`
-  width: 1.25vw;
-  height: 1.25vw;
-  padding-right: 0.33vw;
+  width: 24px;
+  height: 24px;
+  margin-right: 6px;
 `;
 
 export const MatchNumber = styled.div`
   font-family: 'Apple SD Gothic Neo';
   font-weight: 500;
-  font-size: 1.56vw;
-  line-height: 1.9vw;
+  font-size: 30px;
   letter-spacing: -0.05em;
   color: #171717;
 `;
 
 export const Nav = styled.nav`
   display: flex;
-  width: 60%;
-  gap: 4.1vw;
-  padding-top: 4vw;
+  width: 100%;
+  gap: 80px;
   justify-content: center;
-  padding-bottom: 5vw;
+  margin-bottom: 192px;
 `;
 
 export const Button = styled.button`
   font-family: 'SF Pro';
   font-weight: 400;
-  font-size: 1.25vw;
-  line-height: 1.5vw;
+  font-size: 24px;
   cursor: pointer;
   background: white;
   border: white;

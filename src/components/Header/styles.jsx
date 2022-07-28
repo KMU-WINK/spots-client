@@ -5,39 +5,41 @@ import login from '../../imgs/login.svg';
 
 export const Container = styled.div`
   width: 100%;
+  max-width: 1200px;
+  height: 80px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 `;
 
 export const Logo = styled.img.attrs({
   src: logoblack,
 })`
-  width: 6.5vw;
-  padding: 1vw 1vw;
+  width: 124px;
+  height: 60px;
 `;
 
 export const RegistBox = styled.div`
   display: flex;
-  padding: 1vw;
-  font-size: 1vw;
+  font-size: 16px;
   justify-content: center;
   align-items: center;
+  margin-left: auto;
 `;
 
 export const Login = styled.div`
   cursor: pointer;
-  padding: 1vw;
+  padding-right: 10px;
 `;
 
 export const SignUp = styled.div`
   cursor: pointer;
-  padding: 1vw;
+  padding-left: 10px;
 `;
 
 export const Loginimg = styled.img.attrs({
   src: login,
 })`
-  width: 1.5vw;
-  padding: 1vw;
+  margin-left: 14px;
+  width: 24px;
 `;
