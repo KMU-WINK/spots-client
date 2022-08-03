@@ -95,7 +95,6 @@ const MatchingPage = () => {
     <>
       <Header />
       <styled.Background />
-
       <styled.MatchingPageBox>
         <styled.Box1>
           <styled.Container>
@@ -103,7 +102,6 @@ const MatchingPage = () => {
               <styled.Text1>모집 현황</styled.Text1>
               <styled.Text7>마감일까지 00일 남았어요.</styled.Text7>
             </styled.FlexBox>
-
             <styled.Member>
               <styled.People />
               <styled.MemberText>
@@ -115,14 +113,11 @@ const MatchingPage = () => {
 
           <styled.Container>
             <styled.Text1>시간</styled.Text1>
-
             <styled.TimeContent>
               <styled.Watch />
               <styled.Text3>22년 07월 08일 17:00</styled.Text3>
             </styled.TimeContent>
-
             <styled.Text1>매칭 장소</styled.Text1>
-
             <styled.LocationContent>
               <styled.Place />
               <styled.Text6>성북구 솔샘로 44 정릉생활관</styled.Text6>
@@ -136,8 +131,11 @@ const MatchingPage = () => {
                 onClick={() => setIsShowCondition(!isShowCondition)}
               />
             </styled.DropdownTitle>
-
-            {isShowCondition ? <ConditionContents /> : null}
+            {isShowCondition ? (
+              <styled.ConditionBox>
+                <ConditionContents />
+              </styled.ConditionBox>
+            ) : null}
           </styled.Container>
 
           <styled.Container>
@@ -145,7 +143,6 @@ const MatchingPage = () => {
               <styled.Text1>호스트 소개</styled.Text1>
               <styled.MenuButton onClick={() => setIsShowHost(!isShowHost)} />
             </styled.DropdownTitle>
-
             {isShowHost ? <HostContents /> : null}
           </styled.Container>
         </styled.Box1>
@@ -161,21 +158,19 @@ const MatchingPage = () => {
               <styled.Text6>성북구 솔샘로 44 정릉생활관</styled.Text6>
             </styled.LocationContent>
           </styled.QuickMenuTitle>
-
           <styled.QuickMenuContent>
             <ConditionContents />
-
             <styled.Cost>
               <styled.CostLightText>예상 비용</styled.CostLightText>
               <styled.CostBoldText>10,000원</styled.CostBoldText>
             </styled.Cost>
-
             <styled.Member>
               <styled.People />
-              <styled.MemberText>현재 인원 (2/4)</styled.MemberText>
+              <styled.MemberText>
+                현재 인원 ({currentMember}/{maxMember})
+              </styled.MemberText>
             </styled.Member>
             <styled.Progress value={currentMember} max={maxMember} />
-
             <styled.MatchingButton>매칭 신청하기</styled.MatchingButton>
           </styled.QuickMenuContent>
         </styled.QuickMenu>

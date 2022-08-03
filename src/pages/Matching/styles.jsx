@@ -13,7 +13,7 @@ export const FlexBox = styled.div`
   align-items: center;
 
   div:not(:last-of-type) {
-    margin-right: 1vw;
+    margin-right: 20px;
   }
 `;
 
@@ -24,52 +24,45 @@ const Text = styled.div`
 
 export const Text1 = styled(Text)`
   font-weight: 800;
-  font-size: 1.6vw;
+  font-size: 32px;
 `;
 
 export const Text2 = styled(Text)`
   font-weight: 600;
-  font-size: 1.25vw;
+  font-size: 24px;
 `;
 
 export const Text3 = styled(Text)`
   font-weight: 800;
-  font-size: 1.25vw;
+  font-size: 24px;
 `;
 
 export const HostBoldText = styled(Text)`
   font-weight: 800;
-  font-size: 1vw;
-  height: 1vw;
-
-  margin-top: 1vw;
-
+  font-size: 20px;
+  margin-top: 21px;
   display: flex;
-
   align-items: center;
 `;
 
 export const HostLightText = styled(Text)`
   font-weight: 500;
-  font-size: 0.8vw;
-
-  margin-top: 0.4vw;
+  font-size: 16px;
+  margin-top: 8px;
 `;
 
 export const Text6 = styled(Text)`
   font-weight: 500;
-  font-size: 1.25vw;
+  font-size: 24px;
 `;
 
 export const Text7 = styled(Text)`
   font-weight: 400;
-  font-size: 1vw;
+  font-size: 20px;
 `;
 
 export const Cost = styled(FlexBox)`
-  padding-top: 1vw;
-  padding-bottom: 1vw;
-
+  padding: 18px 0px 18px 0px;
   border-bottom: 1px solid;
   border-color: #d3d3d3;
 `;
@@ -84,21 +77,14 @@ export const Label = styled(Text)`
   display: flex;
   justify-content: center;
   align-items: center;
-
-  width: 5vw;
-  height: 2.1vw;
-
+  width: 99.27px;
+  height: 40.39px;
   box-sizing: border-box;
-
   border: 1px solid #fb1e53;
   border-radius: 28px;
-
   font-weight: 600;
-  font-size: 1vw;
-
+  font-size: 20px;
   color: #fb1e53;
-
-  margin-top: 1vw;
 `;
 
 export const Labels = styled.div`
@@ -106,39 +92,36 @@ export const Labels = styled.div`
   white-space: nowrap;
 
   ${Label}:not(:last-of-type) {
-    margin-right: 1vw;
+    margin-right: 18px;
   }
 `;
 
 export const Member = styled(FlexBox)`
-  margin-top: 1.5vw;
-  margin-bottom: 1.25vw;
+  margin-top: 30px;
+  margin-bottom: 24px;
 `;
 
 export const MemberText = styled(Text2)``;
 
 export const TimeContent = styled(FlexBox)`
-  margin-top: 1.5vw;
-  margin-bottom: 1.25vw;
+  margin-top: 24px;
+  margin-bottom: 30px;
 `;
 
 export const LocationContent = styled(FlexBox)`
-  margin-top: 1.25vw;
+  margin-top: 24px;
 `;
 
 export const Container = styled.div`
-  width: 41vw;
-
+  width: 786px;
   background: #ffffff;
-
   box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.25);
   border-radius: 12px;
-
-  padding: 1.4vw 2.6vw 1.4vw 3vw;
-  margin-bottom: 1.5vw;
+  padding: 32px 52px 32px 72px;
+  margin-bottom: 32px;
 
   ${FlexBox}:not:(first-of-type) {
-    margin-bottom: 20px;
+    margin-bottom: 24px;
   }
 `;
 
@@ -148,13 +131,10 @@ export const DropdownTitle = styled(FlexBox)`
 
 export const QuickMenu = styled.div`
   background: #ffffff;
-
   box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.25);
   border-radius: 12px;
-
   overflow: hidden;
-  margin-top: 1.5vw;
-
+  margin-top: 32px;
   align-self: flex-start;
   position: -webkit-sticky;
   position: sticky;
@@ -162,17 +142,14 @@ export const QuickMenu = styled.div`
 `;
 
 export const QuickMenuTitle = styled.div`
-  width: 19.8vw;
-  padding: 1.55vw 1.55vw 1vw 1.55vw;
-
+  width: 322px;
+  padding: 32px 28px 24px 28px;
   background-color: #f6f6f6;
 `;
 
 export const QuickMenuContent = styled.div`
-  width: 19.6vw;
-  padding: 0.8vw 1.65vw 2.35vw 1.65vw;
-
-  border-radius: 0px;
+  width: 314px;
+  padding: 16px 32px 44px 32px;
 `;
 
 export const MatchingPageBox = styled.div`
@@ -182,18 +159,19 @@ export const MatchingPageBox = styled.div`
 `;
 
 export const Box1 = styled.div`
-  margin: 1.5vw;
+  margin: 32px;
 `;
 
 export const Background = styled.img.attrs({
   src: `${background}`,
 })`
-  width: 100vw;
+  max-width: 1920px;
+  width: 100%;
 `;
 
 const Icon = styled.img`
-  width: 1.3vw;
-  margin-right: 0.4vw;
+  width: 30px;
+  margin-right: 12px;
 `;
 
 export const MenuButton = styled(Icon).attrs({
@@ -217,7 +195,7 @@ export const People = styled(Icon).attrs({
 export const Progress = styled.progress`
   appearance: none;
   width: 100%;
-  height: 1.35vw;
+  height: 26px;
 
   ::-webkit-progress-bar {
     background: #ffffff;
@@ -235,7 +213,7 @@ export const Progress = styled.progress`
 export const StarRating = styled.div`
   position: relative;
   width: max-content;
-  margin-left: 1.2vw;
+  margin-left: 24px;
 `;
 
 export const StarRated = styled.div`
@@ -253,39 +231,44 @@ export const StarEmpty = styled.div`
 
 export const iconStarRated = styled(Icon).attrs({
   src: `${svgStarRated}`,
-})``;
+})`
+  width: 24px;
+  margin-right: 4px;
+`;
 
 export const iconStarEmpty = styled(Icon).attrs({
   src: `${svgStarEmpty}`,
-})``;
+})`
+  width: 24px;
+  margin-right: 4px;
+`;
 
 const Button = styled(Text)`
   display: flex;
   align-items: center;
   justify-content: center;
-
   font-weight: 700;
-
-  border-radius: 0.625vw;
+  border-radius: 12px;
   background: #fb1e53;
   color: white;
-  font-size: 1.25vw;
-
+  font-size: 24px;
   cursor: pointer;
 `;
 
 export const ContactButton = styled(Button)`
-  margin-top: 1.5vw;
-  padding-top: 0.8vw;
-  padding-bottom: 0.8vw;
-  width: 13.22vw;
+  width: 252px;
+  margin-top: 30px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 `;
 
 export const MatchingButton = styled(Button)`
   width: 100%;
+  margin-top: 44px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+`;
 
-  margin-top: 2.23vw;
-
-  padding-top: 1vw;
-  padding-bottom: 1vw;
+export const ConditionBox = styled.div`
+  margin-top: 21px;
 `;
