@@ -95,7 +95,7 @@ const MatchingPage = () => {
     <>
       <Header />
       <styled.Background />
-      <styled.MatchingPageBox>
+      <styled.Matching>
         <styled.Box1>
           <styled.Container>
             <styled.FlexBox>
@@ -124,11 +124,12 @@ const MatchingPage = () => {
             </styled.LocationContent>
           </styled.Container>
 
-          <styled.Container>
+          <styled.Condition>
             <styled.DropdownTitle>
               <styled.Text1>매칭 조건</styled.Text1>
               <styled.MenuButton
                 onClick={() => setIsShowCondition(!isShowCondition)}
+                toggle={isShowCondition}
               />
             </styled.DropdownTitle>
             {isShowCondition ? (
@@ -136,15 +137,18 @@ const MatchingPage = () => {
                 <ConditionContents />
               </styled.ConditionBox>
             ) : null}
-          </styled.Container>
+          </styled.Condition>
 
-          <styled.Container>
+          <styled.Host>
             <styled.DropdownTitle>
               <styled.Text1>호스트 소개</styled.Text1>
-              <styled.MenuButton onClick={() => setIsShowHost(!isShowHost)} />
+              <styled.MenuButton
+                onClick={() => setIsShowHost(!isShowHost)}
+                toggle={isShowHost}
+              />
             </styled.DropdownTitle>
             {isShowHost ? <HostContents /> : null}
-          </styled.Container>
+          </styled.Host>
         </styled.Box1>
 
         <styled.QuickMenu className="quickBox">
@@ -174,7 +178,7 @@ const MatchingPage = () => {
             <styled.MatchingButton>매칭 신청하기</styled.MatchingButton>
           </styled.QuickMenuContent>
         </styled.QuickMenu>
-      </styled.MatchingPageBox>
+      </styled.Matching>
       <Footer />
     </>
   );

@@ -1,9 +1,9 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import arrow from '../../imgs/arrow right forward.svg';
 import watch from '../../imgs/watch_later.svg';
 import people from '../../imgs/icon-user-two-mono.svg';
 import place from '../../imgs/place.svg';
-import background from '../../imgs/Rectangle 1887.svg';
+import background from '../../imgs/Rectangle-1887.svg';
 
 import svgStarRated from '../../imgs/icon-star-rated.svg';
 import svgStarEmpty from '../../imgs/icon-star-empty.svg';
@@ -117,13 +117,26 @@ export const Container = styled.div`
   background: #ffffff;
   box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.25);
   border-radius: 12px;
-  padding: 32px 52px 32px 72px;
+  padding: 46px 52px 32px 72px;
   margin-bottom: 32px;
 
   ${FlexBox}:not:(first-of-type) {
     margin-bottom: 24px;
   }
 `;
+
+export const Status = styled(Container)``;
+
+export const TimeLocation = styled(Container)``;
+
+export const Condition = styled(Container)`
+  padding: 32px 52px 32px 72px;
+`;
+
+export const Host = styled(Container)`
+  padding: 32px 52px 32px 72px;
+`;
+
 
 export const DropdownTitle = styled(FlexBox)`
   justify-content: space-between;
@@ -152,7 +165,7 @@ export const QuickMenuContent = styled.div`
   padding: 16px 32px 44px 32px;
 `;
 
-export const MatchingPageBox = styled.div`
+export const Matching = styled.div`
   display: flex;
   justify-content: center;
   height: auto;
@@ -162,11 +175,12 @@ export const Box1 = styled.div`
   margin: 32px;
 `;
 
-export const Background = styled.img.attrs({
-  src: `${background}`,
-})`
-  max-width: 1920px;
+export const Background = styled.div`
   width: 100%;
+  height: 507.44px;
+
+  background: url(${background}) no-repeat center;
+  background-size: 1920px;
 `;
 
 const Icon = styled.img`
@@ -178,6 +192,12 @@ export const MenuButton = styled(Icon).attrs({
   src: `${arrow}`,
 })`
   cursor: pointer;
+  ${(props) =>
+    props.toggle &&
+    css`
+      transform: rotate(180deg);
+      transition: all 0.5s ease-in-out;
+    `}
 `;
 
 export const Watch = styled(Icon).attrs({
