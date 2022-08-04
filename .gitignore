@@ -219,3 +219,6 @@ $RECYCLE.BIN/
 .env
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,windows,react,webstorm,visualstudiocode
+
+package-lock.json
+yarn.lock

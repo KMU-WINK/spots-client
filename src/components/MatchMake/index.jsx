@@ -22,3 +22,5 @@ const MatchMake = () => {
     )
 }
 export default MatchMake;
+
+// 56*100/1920
