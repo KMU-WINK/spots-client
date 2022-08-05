@@ -27,6 +27,38 @@ const MatchingPage = () => {
     });
   });
 
+  // toggle 버튼
+  $(function () {
+    $('.condition')
+      .off('click')
+      .on('click', function () {
+        setIsShowCondition(!isShowCondition);
+        if (isShowCondition) {
+          $('.condition')
+            .css('transform', 'rotate(0deg)')
+            .css('transition', 'all 0.5s ease-in-out');
+        } else {
+          $('.condition')
+            .css('transform', 'rotate(-180deg)')
+            .css('transition', 'all 0.5s ease-in-out');
+        }
+      });
+    $('.host')
+      .off('click')
+      .on('click', function () {
+        setIsShowHost(!isShowHost);
+        if (isShowHost) {
+          $('.host')
+            .css('transform', 'rotate(0deg)')
+            .css('transition', 'all 0.5s ease-in-out');
+        } else {
+          $('.host')
+            .css('transform', 'rotate(-180deg)')
+            .css('transition', 'all 0.5s ease-in-out');
+        }
+      });
+  });
+
   // "호스트 소개" 펼쳤을 때
   const HostContents = () => (
     <>
@@ -127,10 +159,7 @@ const MatchingPage = () => {
           <styled.Condition>
             <styled.DropdownTitle>
               <styled.Text1>매칭 조건</styled.Text1>
-              <styled.MenuButton
-                onClick={() => setIsShowCondition(!isShowCondition)}
-                toggle={isShowCondition}
-              />
+              <styled.MenuButton className="condition" />
             </styled.DropdownTitle>
             {isShowCondition ? (
               <styled.ConditionBox>
@@ -142,10 +171,7 @@ const MatchingPage = () => {
           <styled.Host>
             <styled.DropdownTitle>
               <styled.Text1>호스트 소개</styled.Text1>
-              <styled.MenuButton
-                onClick={() => setIsShowHost(!isShowHost)}
-                toggle={isShowHost}
-              />
+              <styled.MenuButton className="host" />
             </styled.DropdownTitle>
             {isShowHost ? <HostContents /> : null}
           </styled.Host>

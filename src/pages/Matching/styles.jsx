@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import arrow from '../../imgs/arrow right forward.svg';
 import watch from '../../imgs/watch_later.svg';
 import people from '../../imgs/icon-user-two-mono.svg';
@@ -137,7 +137,6 @@ export const Host = styled(Container)`
   padding: 32px 52px 32px 72px;
 `;
 
-
 export const DropdownTitle = styled(FlexBox)`
   justify-content: space-between;
 `;
@@ -192,12 +191,6 @@ export const MenuButton = styled(Icon).attrs({
   src: `${arrow}`,
 })`
   cursor: pointer;
-  ${(props) =>
-    props.toggle &&
-    css`
-      transform: rotate(180deg);
-      transition: all 0.5s ease-in-out;
-    `}
 `;
 
 export const Watch = styled(Icon).attrs({
