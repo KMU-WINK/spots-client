@@ -8,8 +8,8 @@ const Title = () => {
                 <styled.TitleText>
                     제목
                 </styled.TitleText>
-                <styled.TitleGet placeholder={"최대 15자 이내의 제목을 입력해주세요."}>
-                    
+                <styled.TitleGet >
+                {/* placeholder={"최대 15자 이내의 제목을 입력해주세요."} */}
                 </styled.TitleGet>
             </styled.TitleBox>
         </styled.TitleContainer>

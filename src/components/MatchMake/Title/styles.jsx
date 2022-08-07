@@ -1,38 +1,39 @@
 import styled from 'styled-components';
 
 export const TitleContainer = styled.div`
-    width: 60%;
-    height: 8.5vw;
+    width: 100%;
+    // height: 188px;
     display : flex;
-    align-items: center;
-    justify-content : center;
     box-shadow: 0px 4px 24px -1px rgba(0,0,0,0.25);
     border-radius: 12px;
-    margin-top : 2vw;
+    margin-top : 48px;
 `
 
 export const TitleBox = styled.div`
     width : 90%;
-    height : 80%;
+    margin : 40px 72px;
     display : flex;
     flex-direction : column;
-    justify-content : space-evenly;
 `;
 
 export const TitleText = styled.p`
-    font-size : 1.3vw;
+    font-size : 32px;
     font-weight: 700;
+    line-height : 38px;
     font-style: normal;
-    line-height: 1.6vw;
 `
 
 export const TitleGet = styled.input.attrs({
-    type : 'text',
-    placeholderTextColor: "#fffff",
+    placeholder : "최대 15자 이내의 제목을 입력해주세요.",
 })`
-    font-size : 0.65vw;
+    margin-top : 20px;
+    font-size : 16px;
     font-weight: 500;
     font-style: normal;
     border-radius : 12px;
-    padding : 0.8vw;
+    padding : 16px 30px 15px 30px;
+    border: 1px solid #FB1E53;
+    ::-webkit-input-placeholder {
+        color: #D3D3D3;
+      }
 `

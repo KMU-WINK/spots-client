@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import * as styled from './styles';
 
 const items = [
-  { id: 1, url: 'src/imgs/Rectangle 1890.svg' },
-  { id: 2, url: 'src/imgs/Rectangle 1891.svg' },
-  { id: 2, url: 'src/imgs/Rectangle 1892.svg' },
-  { id: 2, url: 'src/imgs/Rectangle 1894.svg' },
+  { id: 1, url: '../src/imgs/Rectangle 1890.svg' },
+  { id: 2, url: '../src/imgs/Rectangle 1891.svg' },
+  { id: 2, url: '../src/imgs/Rectangle 1892.svg' },
+  { id: 2, url: '../src/imgs/Rectangle 1894.svg' },
 ];
 
 function NextArrow(props) {

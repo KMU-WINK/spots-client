@@ -21,7 +21,7 @@ const Date = () => {
                     <styled.PrevArrowInvalid />
                     <styled.NextArrowValid />
                 </styled.CalendarBox>
-                <styled.Horizon />
+                <styled.Horizon  />
                 <styled.TimeBox>
                     <styled.Watch />
                     <styled.TimeText>

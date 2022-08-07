@@ -5,38 +5,39 @@ import nextArrowValid from '../../../imgs/MatchMake/nextArrowValid.svg';
 import watch from '../../../imgs/MatchMake/watch.svg';
 
 export const DateContainer = styled.div`
-  width: 60%;
-  height: 19.5vw;
-  display : flex;
-  align-items: center;
-  justify-content : center;
-  box-shadow: 0px 4px 24px -1px rgba(0,0,0,0.25);
-  border-radius: 12px;
-  margin-top : 2vw;
+    width: 100%;
+    // height: 507px;
+    display : flex;
+    box-shadow: 0px 4px 24px -1px rgba(0,0,0,0.25);
+    border-radius: 12px;
+    margin-top : 32px;
 `
 
 export const DateBox = styled.div`
-    width : 90%;
-    height : 80%;
-    display : flex;
-    flex-direction : column;
+  width : 90%;
+  margin : 40px 72px;
+  display : flex;
+  flex-direction : column;
 `;
 
 export const DateText = styled.p`
-    font-size : 1.3vw;
-    font-weight: 700;
-    font-style: normal;
-    line-height: 1.6vw;
+  font-size : 32px;
+  line-height : 38px;
+  font-weight: 700;
+  font-style: normal;
 `
 
 export const DateInform = styled.p`
-    font-size : 0.8vw;
+    font-size : 20px;
+    line-height : 24px;
     font-weight: 500;
     font-style: normal;
-    line-height: 0.9vw;
+    margin-top : 8px;
 `
 
 export const DateTime = styled.div`
+    margin-top : 24px;
+    height : 29px;
     display : flex;
     align-items: center;
 `;
@@ -44,61 +45,70 @@ export const DateTime = styled.div`
 export const CalendarCheck = styled.img.attrs({
     src: calendarCheck,
   })`
-    width: 1.25vw;
-    height: 1.25vw;
+    width: 30px;
+    height: 30px;
 `;
 
 export const DateTimeText = styled.p`
-    font-size : 1.25vw;
+  margin-left : 8px;
+    font-size : 24px;
     font-weight: 700;
     font-style: normal;
 `;
 
 export const CalendarBox = styled.div`
+    margin : 12px 0px 30px;
     display : flex;
-    height : 9.5vw;
+    height : 140px;
     justify-content : space-between;
 `;
+
+export const Horizon = styled.hr`
+    height : 1px;
+    border  : none;
+    background : #D3D3D3;
+`
 
 export const PrevArrowInvalid = styled.img.attrs({
     src: prevArrowInvalid,
   })`
-    width: 0.6vw;
-    height: 0.6vw;
+    width: 20px;
+    height: 20px;
 `;
 
 export const NextArrowValid = styled.img.attrs({
     src: nextArrowValid,
   })`
-    width: 0.6vw;
-    height: 0.6vw;
+    width: 20px;
+    height: 20px;
 `;
 
-
-export const Horizon = styled.hr`
-`;
 
 export const TimeBox = styled.div`
   display : flex;
   align-items : center;
+  height : 29px;
+  margin-top : 30px;
 `
 
 export const Watch = styled.img.attrs({
     src: watch,
   })`
-    width: 1.25vw;
-    height: 1.25vw;
+    width: 30px;
+    height: 30px;
 `;
 
 export const TimeText = styled.p`
-    font-size : 1.25vw;
+    font-size : 24px;
     font-weight: 700;
     font-style: normal;
+    margin-left : 8px;
 `;
 
 export const TimeGetBox = styled.div`
   display : flex;
-  height : 15%;
+  height : 49px;
+  margin : 12px 0 0 30px;
   align-items : center;
 `
 
@@ -106,17 +116,15 @@ export const TimeGet = styled.div`
   display : flex;
   width : 10%;
   height : 100%;
-  margin-left : 1.25vw;
   border: 1px solid #FB1E53;
   border-radius : 12px;
 `
 
 export const TimeInform = styled.p`
-    font-size : 0.8vw;
+    font-size : 20px;
     font-weight: 500;
     font-style: normal;
-    line-height: 0.9vw;
-    margin-left : 1vw;
+    margin-left : 14px;
 `
 
 
