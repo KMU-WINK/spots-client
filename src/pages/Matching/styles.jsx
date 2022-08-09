@@ -20,45 +20,39 @@ export const FlexBox = styled.div`
 const Text = styled.div`
   font-family: 'Pretendard';
   font-style: normal;
+  font-size: ${props => props.fontSize};
 `;
 
-export const Text1 = styled(Text)`
-  font-weight: 800;
-  font-size: 32px;
+export const NormalText = styled(Text)`
+  font-weight: 400;
 `;
 
-export const Text2 = styled(Text)`
+export const MediumText = styled(Text)`
+  font-weight: 500;
+`;
+
+export const SemiBoldText = styled(Text)`
   font-weight: 600;
-  font-size: 24px;
 `;
 
-export const Text3 = styled(Text)`
-  font-weight: 800;
-  font-size: 24px;
+export const BoldText = styled(Text)`
+  font-weight: 700;
 `;
 
-export const HostBoldText = styled(Text)`
+export const ExtraBoldText = styled(Text)`
   font-weight: 800;
+`;
+
+export const HostBoldText = styled(ExtraBoldText)`
   font-size: 20px;
   margin-top: 21px;
   display: flex;
   align-items: center;
 `;
 
-export const HostLightText = styled(Text)`
-  font-weight: 500;
+export const HostLightText = styled(MediumText)`
   font-size: 16px;
   margin-top: 8px;
-`;
-
-export const Text6 = styled(Text)`
-  font-weight: 500;
-  font-size: 24px;
-`;
-
-export const Text7 = styled(Text)`
-  font-weight: 400;
-  font-size: 20px;
 `;
 
 export const Cost = styled(FlexBox)`
@@ -67,13 +61,7 @@ export const Cost = styled(FlexBox)`
   border-color: #d3d3d3;
 `;
 
-export const CostBoldText = styled(Text7)`
-  font-weight: 700;
-`;
-
-export const CostLightText = styled(Text7)``;
-
-export const Label = styled(Text)`
+export const Label = styled(SemiBoldText)`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -82,7 +70,6 @@ export const Label = styled(Text)`
   box-sizing: border-box;
   border: 1px solid #fb1e53;
   border-radius: 28px;
-  font-weight: 600;
   font-size: 20px;
   color: #fb1e53;
 `;
@@ -97,19 +84,25 @@ export const Labels = styled.div`
 `;
 
 export const Member = styled(FlexBox)`
-  margin-top: 30px;
-  margin-bottom: 24px;
+  margin: 30px 0px 24px 0px;
 `;
 
-export const MemberText = styled(Text2)``;
-
 export const TimeContent = styled(FlexBox)`
-  margin-top: 24px;
-  margin-bottom: 30px;
+  margin: 24px 0px 30px 0px;
 `;
 
 export const LocationContent = styled(FlexBox)`
   margin-top: 24px;
+`;
+
+export const Address = styled.div`
+  display: flex;
+  padding-left: ${props => props.left};
+  padding-top: ${props => props.top};
+`;
+
+export const HyperText = styled(NormalText)`
+  font-color: #b3b3b3;
 `;
 
 export const Container = styled.div`
@@ -117,11 +110,11 @@ export const Container = styled.div`
   background: #ffffff;
   box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.25);
   border-radius: 12px;
-  padding: 46px 52px 32px 72px;
-  margin-bottom: 32px;
+  padding: 46px 52px 50px 72px;
+  margin: 0px 0px 32px 0px;
 
   ${FlexBox}:not:(first-of-type) {
-    margin-bottom: 24px;
+    margin: 0px 0px 24px 0px;
   }
 `;
 
@@ -163,6 +156,8 @@ export const QuickMenuContent = styled.div`
   width: 314px;
   padding: 16px 32px 44px 32px;
 `;
+
+export const QuickMenuAddress = styled(FlexBox)``;
 
 export const Matching = styled.div`
   display: flex;
@@ -256,11 +251,10 @@ export const iconStarEmpty = styled(Icon).attrs({
   margin-right: 4px;
 `;
 
-const Button = styled(Text)`
+const Button = styled(BoldText)`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 700;
   border-radius: 12px;
   background: #fb1e53;
   color: white;
@@ -270,16 +264,14 @@ const Button = styled(Text)`
 
 export const ContactButton = styled(Button)`
   width: 252px;
-  margin-top: 30px;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  margin: 30px 0px 0px 0px;
+  padding: 16px 0px 16px 0px;
 `;
 
 export const MatchingButton = styled(Button)`
   width: 100%;
-  margin-top: 44px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  margin: 44px 0px 0px 0px;
+  padding: 20px 0px 20px 0px;
 `;
 
 export const ConditionBox = styled.div`

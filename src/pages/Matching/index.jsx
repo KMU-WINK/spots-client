@@ -131,34 +131,45 @@ const MatchingPage = () => {
         <styled.Box1>
           <styled.Container>
             <styled.FlexBox>
-              <styled.Text1>모집 현황</styled.Text1>
-              <styled.Text7>마감일까지 00일 남았어요.</styled.Text7>
+              <styled.BoldText fontSize="32px">모집 현황</styled.BoldText>
+              <styled.NormalText fontSize="20px">
+                마감일까지 00일 남았어요.
+              </styled.NormalText>
             </styled.FlexBox>
             <styled.Member>
               <styled.People />
-              <styled.MemberText>
+              <styled.SemiBoldText fontSize="24px">
                 현재 인원 ({currentMember}/{maxMember})
-              </styled.MemberText>
+              </styled.SemiBoldText>
             </styled.Member>
             <styled.Progress value={currentMember} max={maxMember} />
           </styled.Container>
 
           <styled.Container>
-            <styled.Text1>시간</styled.Text1>
+            <styled.BoldText fontSize="32px">시간</styled.BoldText>
             <styled.TimeContent>
               <styled.Watch />
-              <styled.Text3>22년 07월 08일 17:00</styled.Text3>
+              <styled.ExtraBoldText fontSize="24px">
+                22년 07월 08일 17:00
+              </styled.ExtraBoldText>
             </styled.TimeContent>
-            <styled.Text1>매칭 장소</styled.Text1>
+            <styled.BoldText fontSize="32px">매칭 장소</styled.BoldText>
             <styled.LocationContent>
               <styled.Place />
-              <styled.Text6>성북구 솔샘로 44 정릉생활관</styled.Text6>
+              <styled.MediumText fontSize="24px">
+                국민대학교 제1 정릉생활관
+              </styled.MediumText>
             </styled.LocationContent>
+            <styled.Address left="44px" top="14px">
+              <styled.NormalText fontSize="20px">
+                서울특별시 성북구 솔샘로 44
+              </styled.NormalText>
+            </styled.Address>
           </styled.Container>
 
           <styled.Condition>
             <styled.DropdownTitle>
-              <styled.Text1>매칭 조건</styled.Text1>
+              <styled.BoldText fontSize="32px">매칭 조건</styled.BoldText>
               <styled.MenuButton className="condition" />
             </styled.DropdownTitle>
             {isShowCondition ? (
@@ -170,7 +181,7 @@ const MatchingPage = () => {
 
           <styled.Host>
             <styled.DropdownTitle>
-              <styled.Text1>호스트 소개</styled.Text1>
+              <styled.BoldText fontSize="32px">호스트 소개</styled.BoldText>
               <styled.MenuButton className="host" />
             </styled.DropdownTitle>
             {isShowHost ? <HostContents /> : null}
@@ -181,24 +192,30 @@ const MatchingPage = () => {
           <styled.QuickMenuTitle>
             <styled.FlexBox>
               <styled.Watch />
-              <styled.Text3>22년 07월 08일 17:00</styled.Text3>
+              <styled.ExtraBoldText fontSize="24px">
+                22년 07월 08일 17:00
+              </styled.ExtraBoldText>
             </styled.FlexBox>
             <styled.LocationContent>
               <styled.Place />
-              <styled.Text6>성북구 솔샘로 44 정릉생활관</styled.Text6>
+              <styled.MediumText fontSize="24px">
+                성북구 솔샘로 44 정릉생활관
+              </styled.MediumText>
             </styled.LocationContent>
           </styled.QuickMenuTitle>
           <styled.QuickMenuContent>
             <ConditionContents />
             <styled.Cost>
-              <styled.CostLightText>예상 비용</styled.CostLightText>
-              <styled.CostBoldText>10,000원</styled.CostBoldText>
+              <styled.ExtraBoldText fontSize="24px">
+                예상 비용
+              </styled.ExtraBoldText>
+              <styled.BoldText fontSize="24px">10,000원</styled.BoldText>
             </styled.Cost>
             <styled.Member>
               <styled.People />
-              <styled.MemberText>
+              <styled.SemiBoldText fontSize="24px">
                 현재 인원 ({currentMember}/{maxMember})
-              </styled.MemberText>
+              </styled.SemiBoldText>
             </styled.Member>
             <styled.Progress value={currentMember} max={maxMember} />
             <styled.MatchingButton>매칭 신청하기</styled.MatchingButton>
