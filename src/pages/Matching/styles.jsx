@@ -4,7 +4,6 @@ import watch from '../../imgs/watch_later.svg';
 import people from '../../imgs/icon-user-two-mono.svg';
 import place from '../../imgs/place.svg';
 import background from '../../imgs/Rectangle-1887.svg';
-
 import svgStarRated from '../../imgs/icon-star-rated.svg';
 import svgStarEmpty from '../../imgs/icon-star-empty.svg';
 
@@ -18,9 +17,13 @@ export const FlexBox = styled.div`
 `;
 
 const Text = styled.div`
+  display: flex;
+  align-items: center;
   font-family: 'Pretendard';
   font-style: normal;
   font-size: ${props => props.fontSize};
+  margin: ${props => props.margin};
+  padding: ${props => props.padding};
 `;
 
 export const NormalText = styled(Text)`
@@ -41,18 +44,6 @@ export const BoldText = styled(Text)`
 
 export const ExtraBoldText = styled(Text)`
   font-weight: 800;
-`;
-
-export const HostBoldText = styled(ExtraBoldText)`
-  font-size: 20px;
-  margin-top: 21px;
-  display: flex;
-  align-items: center;
-`;
-
-export const HostLightText = styled(MediumText)`
-  font-size: 16px;
-  margin-top: 8px;
 `;
 
 export const Cost = styled(FlexBox)`
@@ -92,7 +83,7 @@ export const TimeContent = styled(FlexBox)`
 `;
 
 export const LocationContent = styled(FlexBox)`
-  margin-top: 24px;
+  margin-top: ${props => props.top};
 `;
 
 export const Address = styled.div`
@@ -102,7 +93,10 @@ export const Address = styled.div`
 `;
 
 export const HyperText = styled(NormalText)`
-  font-color: #b3b3b3;
+  color: #b3b3b3;
+  border-bottom: 1px solid #b3b3b3;
+  margin: 0px 0px 0px 8px;
+  cursor: pointer;
 `;
 
 export const Container = styled.div`

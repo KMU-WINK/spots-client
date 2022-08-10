@@ -11,7 +11,7 @@ const MatchingPage = () => {
   const currentMember = 2;
   const maxMember = 4;
 
-  // QuickMenu 따라오기
+  // QuickMenu
   const quickBox = $('.quickBox');
   const quickTop = 30;
 
@@ -27,7 +27,7 @@ const MatchingPage = () => {
     });
   });
 
-  // toggle 버튼
+  // toggle
   $(function () {
     $('.condition')
       .off('click')
@@ -59,10 +59,10 @@ const MatchingPage = () => {
       });
   });
 
-  // "호스트 소개" 펼쳤을 때
+  // isShowHost
   const HostContents = () => (
     <>
-      <styled.HostBoldText>
+      <styled.ExtraBoldText fontSize="20px" margin="21px 0px 0px 0px">
         호스트 평점
         <styled.StarRating>
           <styled.StarRated>
@@ -100,21 +100,29 @@ const MatchingPage = () => {
             </span>
           </styled.StarEmpty>
         </styled.StarRating>
-      </styled.HostBoldText>
-      <styled.HostBoldText>호스트 응답률</styled.HostBoldText>
-      <styled.HostBoldText>호스트 소개글</styled.HostBoldText>
-      <styled.HostLightText>
+      </styled.ExtraBoldText>
+      <styled.ExtraBoldText fontSize="20px" margin="21px 0px 0px 0px">
+        호스트 응답률
+      </styled.ExtraBoldText>
+      <styled.ExtraBoldText fontSize="20px" margin="21px 0px 0px 0px">
+        호스트 소개글
+      </styled.ExtraBoldText>
+      <styled.MediumText fontSize="16px" margin="8px 0px 0px 0px">
         안녕하세요 저는 운동을 좋아하는 김삐삐입니다
         <br />
         운동 같이 할 사람 찾느라 힘들었는데 여기서 같이 운동 재밌게 해봐요!
-      </styled.HostLightText>
-      <styled.HostBoldText>호스트가 선호하는 운동</styled.HostBoldText>
-      <styled.HostBoldText>호스트 보유 뱃지</styled.HostBoldText>
+      </styled.MediumText>
+      <styled.ExtraBoldText fontSize="20px" margin="21px 0px 0px 0px">
+        호스트가 선호하는 운동
+      </styled.ExtraBoldText>
+      <styled.ExtraBoldText fontSize="20px" margin="21px 0px 0px 0px">
+        호스트 보유 뱃지
+      </styled.ExtraBoldText>
       <styled.ContactButton>호스트에게 연락하기</styled.ContactButton>
     </>
   );
 
-  // "매칭 조건" 펼쳤을 때
+  // isShowCondition
   const ConditionContents = () => (
     <styled.Labels>
       <styled.Label>서초 1동</styled.Label>
@@ -154,7 +162,7 @@ const MatchingPage = () => {
               </styled.ExtraBoldText>
             </styled.TimeContent>
             <styled.BoldText fontSize="32px">매칭 장소</styled.BoldText>
-            <styled.LocationContent>
+            <styled.LocationContent top="24px">
               <styled.Place />
               <styled.MediumText fontSize="24px">
                 국민대학교 제1 정릉생활관
@@ -196,12 +204,18 @@ const MatchingPage = () => {
                 22년 07월 08일 17:00
               </styled.ExtraBoldText>
             </styled.FlexBox>
-            <styled.LocationContent>
+            <styled.LocationContent top="12px">
               <styled.Place />
-              <styled.MediumText fontSize="24px">
-                성북구 솔샘로 44 정릉생활관
+              <styled.MediumText fontSize="18px">
+                국민대학교 제1 정릉생활관
               </styled.MediumText>
             </styled.LocationContent>
+            <styled.Address left="44px">
+              <styled.NormalText fontSize="16px">
+                서울특별시 성북구 솔샘로 44
+                <styled.HyperText fontSize="14px">지도 보기</styled.HyperText>
+              </styled.NormalText>
+            </styled.Address>
           </styled.QuickMenuTitle>
           <styled.QuickMenuContent>
             <ConditionContents />
