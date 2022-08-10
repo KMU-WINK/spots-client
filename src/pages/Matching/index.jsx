@@ -15,7 +15,6 @@ const MatchingPage = () => {
   const quickBox = $('.quickBox');
   const quickTop = 30;
 
-  quickBox.css('top', $(window).height());
   $(function () {
     quickBox.animate({ top: $(document).scrollTop() + quickTop + 'px' }, 1000);
     $(window).on('scroll', function () {
