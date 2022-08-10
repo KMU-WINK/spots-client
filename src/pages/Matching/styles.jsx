@@ -137,7 +137,7 @@ export const QuickMenu = styled.div`
   align-self: flex-start;
   position: -webkit-sticky;
   position: sticky;
-  top: 0;
+  top: 32px;
 `;
 
 export const QuickMenuTitle = styled.div`
@@ -271,3 +271,9 @@ export const MatchingButton = styled(Button)`
 export const ConditionBox = styled.div`
   margin-top: 21px;
 `;
+
+export const Box2 = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
