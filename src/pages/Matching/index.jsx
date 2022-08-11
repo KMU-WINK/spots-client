@@ -11,30 +11,6 @@ const MatchingPage = () => {
   const currentMember = 2;
   const maxMember = 4;
 
-  // QuickMenu
-  // const quickBox = $('.quickBox');
-  // const quickTop = 30;
-
-  // $(function () {
-  //   quickBox.animate({ top: $(document).scrollTop() + quickTop + 'px' }, 1000);
-  //   $(window).on('scroll', function () {
-  //     quickBox.stop();
-  //     quickBox.animate(
-  //       { top: $(document).scrollTop() + quickTop + 'px' },
-  //       1000,
-  //     );
-  //   });
-  // });
-
-  // $(function() {
-  //   var curPos = parseInt(quickBox.css("top"));
-  //   $(window).on('scroll', function() {
-  //     console.log($(window).scrollTop());
-  //     var pos = $(window).scrollTop();
-  //     quickBox.stop().animate({"top": pos + curPos + "px"}, 1000);
-  //   })
-  // });
-
   // toggle
   $(function () {
     $('.condition')
