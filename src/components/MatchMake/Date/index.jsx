@@ -1,6 +1,13 @@
 import React from 'react';
 import * as styled from './styles';
 
+// const onChange = (e) => {
+//     const { value } = e.target
+//     // value의 값이 숫자가 아닐경우 빈 문자열로 replace
+//     const onlyNumber = value.replace(/[^0-9]/g, '')
+//     setInputs(onlyNumber)
+//   }
+
 const Date = () => {
     return(
         <styled.DateContainer>
@@ -30,8 +37,11 @@ const Date = () => {
                 </styled.TimeBox>
                 <styled.TimeGetBox>
                     <styled.TimeGet>
-                        {/* <styled.TimeGet2359 placeholder='17' />
-                        <styled.TimeGet2359 placeholder='00' /> */}
+                        <styled.TimeGetTime placeholder="17"/>
+                        <styled.Colon>
+                            :
+                        </styled.Colon>
+                        <styled.TimeGetTime placeholder="00" direction="right"/>
                     </styled.TimeGet>
                     <styled.TimeInform>
                             ※ 약속 시간을 입력해주세요.

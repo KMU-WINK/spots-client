@@ -110,14 +110,43 @@ export const TimeGetBox = styled.div`
   height : 49px;
   margin : 12px 0 0 30px;
   align-items : center;
+
 `
 
 export const TimeGet = styled.div`
   display : flex;
+  align-items : center;
+  justify-content : space-evenly;
   width : 10%;
   height : 100%;
   border: 1px solid #FB1E53;
   border-radius : 12px;
+`
+
+export const TimeGetTime = styled.input.attrs(props => ({
+  placeholder : props.placeholder,
+}))`
+  width : 30px;
+  font-size : 24px;
+  font-weight: 500;
+  font-style: normal;
+  border : none;
+  margin-${(props) => props.direction || "left"} : 10px;
+  border-radius : 12px;
+  ::-webkit-input-placeholder {
+      color: #D3D3D3;
+    };
+  &:focus {
+    outline : none;
+  }
+`
+
+export const Colon = styled.p`
+  color : #FB1E53;
+  font-size : 24px;
+  padding-bottom : 5px;
+  font-weight : 500;
+  vertical-align : center;
 `
 
 export const TimeInform = styled.p`

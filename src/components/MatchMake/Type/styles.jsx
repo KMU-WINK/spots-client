@@ -1,28 +1,29 @@
 import styled from 'styled-components';
-import place from '../../../imgs/MatchMake/place.svg';
 
-export const TypeContainer = styled.div`
-    width: 60%;
-    height: 13vw;
+export const sportsBox = styled.div`
+    margin-top : 20px;
+    margin-left : 9px;
     display : flex;
-    align-items: center;
-    justify-content : center;
-    background-color : white;
-    box-shadow: 0px 4px 24px -1px rgba(0,0,0,0.25);
-    border-radius: 12px;
-    margin-top : 2vw;
-`;
-
-export const TypeBox = styled.div`
-    width : 90%;
-    height : 80%;
-    display : flex;
-    flex-direction : column;
 `
 
-export const TypeText = styled.p`
-    font-size : 1.3vw;
-    font-weight: 700;
+export const eachSports = styled.div`
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+    margin-right : 70px;
+`
+
+export const sportsText = styled.span`
+    margin-top : 6px;
+    font-size : 14px;
+    line-height : 17px;
+    font-weight: 500;
     font-style: normal;
-    line-height: 1.6vw;
+`
+
+export const sports_img = styled.img.attrs(props => ({
+    src: props.src,
+  }))`
+    width: 40px;
+    height: 40px;
 `

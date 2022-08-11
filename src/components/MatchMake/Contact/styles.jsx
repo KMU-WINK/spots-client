@@ -1,27 +1,24 @@
 import styled from 'styled-components';
 
-export const ContactContainer = styled.div`
-    width: 60%;
-    height: 16.5vw;
-    display : flex;
-    align-items: center;
-    justify-content : center;
-    background-color : white;
-    box-shadow: 0px 4px 24px -1px rgba(0,0,0,0.25);
-    border-radius: 12px;
-    margin-top : 2vw;
-`;
-
-export const ContactBox = styled.div`
-    width : 90%;
-    height : 80%;
-    display : flex;
-    flex-direction : column;
+export const OpenProfile = styled.div`
+    margin-top : 30px;
+    display : inline-flex;
 `
 
-export const ContactText = styled.p`
-    font-size : 1.3vw;
+export const Text =styled.span`
+    font-size : 24px;
+    line-height : 29px;
     font-weight: 700;
     font-style: normal;
-    line-height: 1.6vw;
+`
+
+export const WarningText = styled.p`
+    margin-top : 15px;
+    margin-bottom : 30px;
+    font-size : 20px;
+    line-height : 24px;
+    font-weight : 500;
+    font-style : normal;
+    color : #FB1E53;
+    visibility : hidden;
 `

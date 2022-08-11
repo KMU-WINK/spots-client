@@ -26,6 +26,7 @@ export const TitleText = styled.p`
 export const TitleGet = styled.input.attrs({
     placeholder : "최대 15자 이내의 제목을 입력해주세요.",
 })`
+    width : 990px;
     margin-top : 20px;
     font-size : 16px;
     font-weight: 500;
@@ -36,4 +37,7 @@ export const TitleGet = styled.input.attrs({
     ::-webkit-input-placeholder {
         color: #D3D3D3;
       }
+    &:focus {
+    outline : none;
+    }
 `
