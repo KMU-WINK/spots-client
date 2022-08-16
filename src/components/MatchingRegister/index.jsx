@@ -32,7 +32,7 @@ const MatchingRegister = () => {
     console.log(window.scrollY);
     return(
         <styled.MatchingRegister>
-            <styled.ResisterBtn onClick={onClick}>
+            <styled.ResisterBtn >
                 매칭 글 등록하기
             </ styled.ResisterBtn>
         </ styled.MatchingRegister>

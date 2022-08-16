@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import * as styled from './styles';
-import { Container, Box, Text, Horizon, GetInform, ReferText, CheckBox } from '../common';
+import { Container, Box, Text, Horizon, GetInform, ReferText, CheckBox, OnCheck } from '../common';
 
 const Contact = () => {
+
+    const [isCheck, setIsCheck] = useState(false);
+
+    const onCheck = () => {
+        setIsCheck(!isCheck)
+    }
+
     return(
         <Container>
             <Box>
@@ -21,7 +28,8 @@ const Contact = () => {
                     <styled.Text>
                         프로필 공개하기
                     </styled.Text>
-                    <CheckBox margin="1px 0 0 18px"/>
+                    <CheckBox margin="1px 0 0 18px" onClick={onCheck} backColor={isCheck ? "#FB1E53" : "transparent"} > <OnCheck /> </CheckBox>
+                    
                 </styled.OpenProfile>
 
                 <ReferText>

@@ -2,13 +2,13 @@ import styled from 'styled-components';
 
 export const MatchingRegister = styled.div`
     display : flex;
-    width : 1920px;
-    // width : 100%;
+    // width : 1920px;
+    width : 100%;
     height : 173px;
     justify-content : center;
     align-items : center;
     margin-top : 32px;
-    box-shadow : 4px 0px 24px 0px rgba(0, 0, 0, 0.25);
+    box-shadow : 0px -4px 24px -18px rgba(0, 0, 0, 0.25);
     background-color : white;
     position : fixed;
     z-index: 1;

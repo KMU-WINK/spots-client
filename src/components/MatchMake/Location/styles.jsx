@@ -48,14 +48,21 @@ export const LocationGetBox = styled.div`
     margin-top : 32px;
 `
 
+export const ClearBtn = styled.button`
+  position : relative;
+  width: 24px;
+  height: 24px;
+  top : 13px;
+  right : 135px;
+  border : none;
+  background : transparent;
+`
+
 export const Clear = styled.img.attrs({
     src: clear,
   })`
     width: 24px;
     height: 24px;
-    position : relative;
-    top : 13px;
-    right : 135px;
 `;
 
 export const SearchBtn = styled.button`

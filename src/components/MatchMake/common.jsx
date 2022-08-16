@@ -64,12 +64,17 @@ export const CheckBox = styled.button`
     width : 24px;
     height : 24px;
     border: 1px solid #FB1E53;
-    background-color : white;
+    background-color : ${(props) => props.backColor || "none"};
+    // backgroud-color : "blue";
+    display : flex;
+    justify-content : center;
+    align-items : center;
 `
 
 export const OnCheck = styled.img.attrs({
     src: check,
   })`
-    width: 24px;
-    height: 24px;
+    margin-top : 1px;
+    width: 14.5px;
+    height: 10px;
 `;
