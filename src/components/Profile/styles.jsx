@@ -2,12 +2,12 @@ import styled from 'styled-components';
 import calendarCheck from '../../imgs/MatchMake/calendarCheck.svg';
 
 export const tempDiv = styled.div`
-  display : block;
-  align-items : center;
+  margin-top : 150px;
+  text-align : center;
 `
 
 export const EditButton = styled.button`
-  margin-top : 150px;
+  margin : auto;
   border-radius : 12px;
   width : 167px;
   height : 57px;
