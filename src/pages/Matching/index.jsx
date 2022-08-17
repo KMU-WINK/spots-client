@@ -121,7 +121,7 @@ const MatchingPage = () => {
       <styled.Background />
       <styled.Matching>
         <styled.Box1>
-          <styled.Container>
+          <styled.NewBox>
             <styled.FlexBox>
               <styled.BoldText fontSize="32px">모집 현황</styled.BoldText>
               <styled.NormalText fontSize="20px">
@@ -135,9 +135,9 @@ const MatchingPage = () => {
               </styled.SemiBoldText>
             </styled.Member>
             <styled.Progress value={currentMember} max={maxMember} />
-          </styled.Container>
+          </styled.NewBox>
 
-          <styled.Container>
+          <styled.NewBox>
             <styled.BoldText fontSize="32px">시간</styled.BoldText>
             <styled.TimeContent>
               <styled.Watch />
@@ -157,9 +157,9 @@ const MatchingPage = () => {
                 서울특별시 성북구 솔샘로 44
               </styled.NormalText>
             </styled.Address>
-          </styled.Container>
+          </styled.NewBox>
 
-          <styled.Condition>
+          <styled.NewBox>
             <styled.DropdownTitle>
               <styled.BoldText fontSize="32px">매칭 조건</styled.BoldText>
               <styled.MenuButton className="condition" />
@@ -169,15 +169,15 @@ const MatchingPage = () => {
                 <ConditionContents />
               </styled.ConditionBox>
             ) : null}
-          </styled.Condition>
+          </styled.NewBox>
 
-          <styled.Host>
+          <styled.NewBox>
             <styled.DropdownTitle>
               <styled.BoldText fontSize="32px">호스트 소개</styled.BoldText>
               <styled.MenuButton className="host" />
             </styled.DropdownTitle>
             {isShowHost ? <HostContents /> : null}
-          </styled.Host>
+          </styled.NewBox>
         </styled.Box1>
 
         <styled.QuickMenu className="quickBox">

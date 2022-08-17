@@ -16,6 +16,11 @@ export const FlexBox = styled.div`
   }
 `;
 
+export const NewBox = styled.div`
+  width: 662px;
+  padding: 39.03px 0px 40.97px 0px;
+`;
+
 const Text = styled.div`
   display: flex;
   align-items: center;
@@ -116,14 +121,6 @@ export const Status = styled(Container)``;
 
 export const TimeLocation = styled(Container)``;
 
-export const Condition = styled(Container)`
-  padding: 32px 52px 32px 72px;
-`;
-
-export const Host = styled(Container)`
-  padding: 32px 52px 32px 72px;
-`;
-
 export const DropdownTitle = styled(FlexBox)`
   justify-content: space-between;
 `;
@@ -133,11 +130,11 @@ export const QuickMenu = styled.div`
   box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.25);
   border-radius: 12px;
   overflow: hidden;
-  margin-top: 32px;
+  margin-top: 48px;
   align-self: flex-start;
   position: -webkit-sticky;
   position: sticky;
-  top: 32px;
+  top: 48px;
 `;
 
 export const QuickMenuTitle = styled.div`
@@ -160,7 +157,10 @@ export const Matching = styled.div`
 `;
 
 export const Box1 = styled.div`
-  margin: 32px;
+  margin: 54.97px 82px 0px 0px;
+  ${NewBox}:not(:last-of-type) {
+    border-bottom: 1px solid #d9d9d9;
+  }
 `;
 
 export const Background = styled.div`
@@ -276,4 +276,4 @@ export const Box2 = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-`
+`;
