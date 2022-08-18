@@ -7,7 +7,6 @@ export const tempDiv = styled.div`
 `
 
 export const EditButton = styled.button`
-  margin : auto;
   border-radius : 12px;
   width : 167px;
   height : 57px;
