@@ -11,6 +11,14 @@ const MatchingPage = () => {
   const currentMember = 2;
   const maxMember = 4;
 
+  // 선호 운동 설정 여부
+  const basketball = true;
+  const rugby = true;
+  const soccer = true;
+  const tennis = true;
+  const baseball = true;
+  const volleyball = true;
+
   // toggle
   $(function () {
     $('.condition')
@@ -18,13 +26,9 @@ const MatchingPage = () => {
       .on('click', function () {
         setIsShowCondition(!isShowCondition);
         if (isShowCondition) {
-          $('.condition')
-            .css('transform', 'rotate(0deg)')
-            .css('transition', 'all 0.5s ease-in-out');
+          $('.condition').css('transform', 'rotate(0deg)');
         } else {
-          $('.condition')
-            .css('transform', 'rotate(-180deg)')
-            .css('transition', 'all 0.5s ease-in-out');
+          $('.condition').css('transform', 'rotate(-180deg)');
         }
       });
     $('.host')
@@ -32,13 +36,9 @@ const MatchingPage = () => {
       .on('click', function () {
         setIsShowHost(!isShowHost);
         if (isShowHost) {
-          $('.host')
-            .css('transform', 'rotate(0deg)')
-            .css('transition', 'all 0.5s ease-in-out');
+          $('.host').css('transform', 'rotate(0deg)');
         } else {
-          $('.host')
-            .css('transform', 'rotate(-180deg)')
-            .css('transition', 'all 0.5s ease-in-out');
+          $('.host').css('transform', 'rotate(-180deg)');
         }
       });
   });
@@ -96,12 +96,28 @@ const MatchingPage = () => {
         <br />
         운동 같이 할 사람 찾느라 힘들었는데 여기서 같이 운동 재밌게 해봐요!
       </styled.MediumText>
-      <styled.ExtraBoldText fontSize="20px" margin="21px 0px 0px 0px">
+      <styled.ExtraBoldText fontSize="20px" margin="24px 0px 0px 0px">
         호스트가 선호하는 운동
       </styled.ExtraBoldText>
-      <styled.ExtraBoldText fontSize="20px" margin="21px 0px 0px 0px">
+      <styled.Preference>
+      {' '}
+        {basketball ? <styled.Basketball /> : null}
+        {rugby ? <styled.Rugby /> : null}
+        {soccer ? <styled.Soccer /> : null}
+        {tennis ? <styled.Tennis /> : null}
+        {baseball ? <styled.Baseball /> : null}
+        {volleyball ? <styled.Volleyball /> : null}{' '}
+      </styled.Preference>
+
+      <styled.ExtraBoldText fontSize="20px">
         호스트 보유 뱃지
       </styled.ExtraBoldText>
+      <styled.Badges>
+        <styled.Badge />
+        <styled.Badge />
+        <styled.Badge />
+      </styled.Badges>
+
       <styled.ContactButton>호스트에게 연락하기</styled.ContactButton>
     </>
   );
@@ -116,12 +132,12 @@ const MatchingPage = () => {
   );
 
   return (
-    <styled.Box2>
+    <styled.PageBox>
       <Header />
       <styled.Background />
       <styled.Matching>
         <styled.Box1>
-          <styled.NewBox>
+          <styled.ContentBox>
             <styled.FlexBox>
               <styled.BoldText fontSize="32px">모집 현황</styled.BoldText>
               <styled.NormalText fontSize="20px">
@@ -135,31 +151,34 @@ const MatchingPage = () => {
               </styled.SemiBoldText>
             </styled.Member>
             <styled.Progress value={currentMember} max={maxMember} />
-          </styled.NewBox>
+          </styled.ContentBox>
 
-          <styled.NewBox>
+          <styled.ContentBox>
             <styled.BoldText fontSize="32px">시간</styled.BoldText>
-            <styled.TimeContent>
-              <styled.Watch />
-              <styled.ExtraBoldText fontSize="24px">
-                22년 07월 08일 17:00
-              </styled.ExtraBoldText>
-            </styled.TimeContent>
-            <styled.BoldText fontSize="32px">매칭 장소</styled.BoldText>
-            <styled.LocationContent top="24px">
-              <styled.Place />
-              <styled.MediumText fontSize="24px">
-                국민대학교 제1 정릉생활관
-              </styled.MediumText>
-            </styled.LocationContent>
-            <styled.Address left="44px" top="14px">
-              <styled.NormalText fontSize="20px">
-                서울특별시 성북구 솔샘로 44
-              </styled.NormalText>
-            </styled.Address>
-          </styled.NewBox>
+            <>
+              <styled.TempMap />
+              <styled.TimeContent>
+                <styled.Watch />
+                <styled.ExtraBoldText fontSize="24px">
+                  22년 07월 08일 17:00
+                </styled.ExtraBoldText>
+              </styled.TimeContent>
+              <styled.BoldText fontSize="32px">매칭 장소</styled.BoldText>
+              <styled.LocationContent top="24px">
+                <styled.Place />
+                <styled.MediumText fontSize="24px">
+                  국민대학교 제1 정릉생활관
+                </styled.MediumText>
+              </styled.LocationContent>
+              <styled.Address left="44px" top="14px">
+                <styled.NormalText fontSize="20px">
+                  서울특별시 성북구 솔샘로 44
+                </styled.NormalText>
+              </styled.Address>
+            </>
+          </styled.ContentBox>
 
-          <styled.NewBox>
+          <styled.ContentBox>
             <styled.DropdownTitle>
               <styled.BoldText fontSize="32px">매칭 조건</styled.BoldText>
               <styled.MenuButton className="condition" />
@@ -169,15 +188,15 @@ const MatchingPage = () => {
                 <ConditionContents />
               </styled.ConditionBox>
             ) : null}
-          </styled.NewBox>
+          </styled.ContentBox>
 
-          <styled.NewBox>
+          <styled.ContentBox>
             <styled.DropdownTitle>
               <styled.BoldText fontSize="32px">호스트 소개</styled.BoldText>
               <styled.MenuButton className="host" />
             </styled.DropdownTitle>
             {isShowHost ? <HostContents /> : null}
-          </styled.NewBox>
+          </styled.ContentBox>
         </styled.Box1>
 
         <styled.QuickMenu className="quickBox">
@@ -221,7 +240,7 @@ const MatchingPage = () => {
         </styled.QuickMenu>
       </styled.Matching>
       <Footer />
-    </styled.Box2>
+    </styled.PageBox>
   );
 };
 

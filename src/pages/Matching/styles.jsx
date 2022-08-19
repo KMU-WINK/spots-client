@@ -7,6 +7,14 @@ import background from '../../imgs/Rectangle-1887.svg';
 import svgStarRated from '../../imgs/icon-star-rated.svg';
 import svgStarEmpty from '../../imgs/icon-star-empty.svg';
 
+import basketball from '../../imgs/icon-basketball.svg';
+import rugby from '../../imgs/icon-rugby.svg';
+import soccer from '../../imgs/icon-soccer.svg';
+import tennis from '../../imgs/icon-tennis.svg';
+import baseball from '../../imgs/icon-baseball.svg';
+import volleyball from '../../imgs/icon-volleyball.svg';
+import badge from '../../imgs/badge.svg';
+
 export const FlexBox = styled.div`
   display: flex;
   align-items: center;
@@ -16,7 +24,7 @@ export const FlexBox = styled.div`
   }
 `;
 
-export const NewBox = styled.div`
+export const ContentBox = styled.div`
   width: 662px;
   padding: 39.03px 0px 40.97px 0px;
 `;
@@ -158,7 +166,7 @@ export const Matching = styled.div`
 
 export const Box1 = styled.div`
   margin: 54.97px 82px 0px 0px;
-  ${NewBox}:not(:last-of-type) {
+  ${ContentBox}:not(:last-of-type) {
     border-bottom: 1px solid #d9d9d9;
   }
 `;
@@ -193,6 +201,49 @@ export const Place = styled(Icon).attrs({
 export const People = styled(Icon).attrs({
   src: `${people}`,
 })``;
+
+export const Basketball = styled(Icon).attrs({
+  src: `${basketball}`,
+})`
+  width: 48px;
+`;
+
+export const Rugby = styled(Icon).attrs({
+  src: `${rugby}`,
+})`
+  width: 48px;
+`;
+
+export const Soccer = styled(Icon).attrs({
+  src: `${soccer}`,
+})`
+  width: 48px;
+`;
+
+export const Tennis = styled(Icon).attrs({
+  src: `${tennis}`,
+})`
+  width: 48px;
+`;
+
+export const Baseball = styled(Icon).attrs({
+  src: `${baseball}`,
+})`
+  width: 48px;
+`;
+
+export const Volleyball = styled(Icon).attrs({
+  src: `${volleyball}`,
+})`
+  width: 48px;
+`;
+
+export const Badge = styled(Icon).attrs({
+  src: `${badge}`,
+})`
+  width: 144px;
+  height: 76px;
+`;
 
 export const Progress = styled.progress`
   appearance: none;
@@ -258,7 +309,6 @@ const Button = styled(BoldText)`
 
 export const ContactButton = styled(Button)`
   width: 252px;
-  margin: 30px 0px 0px 0px;
   padding: 16px 0px 16px 0px;
 `;
 
@@ -272,8 +322,30 @@ export const ConditionBox = styled.div`
   margin-top: 21px;
 `;
 
-export const Box2 = styled.div`
+export const PageBox = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+`;
+
+export const TempMap = styled.div`
+  margin: 24px 0px 30px 0px;
+  width: 186px;
+  height: 185px;
+  border: 1px solid #d9d9d9;
+  float: right;
+`;
+export const Preference = styled.div`
+  padding: 8px 0px 30px 0px;
+
+  ${Icon}:not(:last-of-type) {
+    margin: 0px 40px 0px 0px;
+  }
+`;
+
+export const Badges = styled.div`
+  padding: 16px 0px 30px 0px;
+  ${Badge}:not(:last-of-type) {
+    margin: 0px 24px 0px 0px;
+  }
 `;
