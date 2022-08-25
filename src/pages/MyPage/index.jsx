@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import * as styled from './styles';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import LoginModal from '../../components/LoginModal';
 
 const MyPage = () => {
   const [currMenu, setCurrMenu] = useState(null);
@@ -66,7 +67,7 @@ const MyPage = () => {
             {currMenu === '2' ? <div>프로필 수정</div> : null}
             {currMenu === '3' ? <div>내가 쓴 게시물</div> : null}
             {currMenu === '4' ? <div>로그아웃</div> : null}
-            {currMenu === '5' ? <div>회원 탈퇴</div> : null}
+            {currMenu === '5' ? <LoginModal /> : null}
           </styled.MenuContents>
         </styled.MenuBox>
       </styled.MyPageContainer>
