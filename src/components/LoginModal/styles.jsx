@@ -4,6 +4,19 @@ import kakao from '../../imgs/kakaotalk.svg';
 import google from '../../imgs/google.svg';
 import close from '../../imgs/close.svg';
 
+export const ModalBg = styled.div`
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  align-itmes: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #3333337f;
+`;
+
 export const LoginBox = styled.div`
   display: flex;
   align-items: center;
@@ -12,6 +25,7 @@ export const LoginBox = styled.div`
   border: ${props => props.border};
   border-radius: 7px;
   width: 440px;
+  cursor: pointer;
 `;
 
 export const TopBar = styled.div`
@@ -21,12 +35,15 @@ export const TopBar = styled.div`
 export const CloseBtn = styled.img.attrs({
   src: close,
 })`
-padding: 24.8px 23.5px 41.7px 0px;
+  padding: 24.8px 23.5px 41.7px 0px;
   cursor: pointer;
   float: right;
 `;
 
 export const ModalBox = styled.div`
+  position: absolute;
+  background: white;
+  z-index: 100;
   width: 518px;
   height: 440px;
   box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.25);
@@ -37,6 +54,7 @@ export const ModalBox = styled.div`
   ${LoginBox}:not(:last-of-type) {
     margin-bottom: 23px;
   }
+  top: 20%;
 `;
 
 export const Slogan = styled.div`
@@ -49,7 +67,6 @@ export const Slogan = styled.div`
 export const LoginText = styled.div`
   font-size: 18px;
   font-weight: 800;
-  cursor: pointer;
 `;
 
 export const Explain = styled.div`
