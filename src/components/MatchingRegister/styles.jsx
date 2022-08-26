@@ -10,7 +10,7 @@ export const MatchingRegister = styled.div`
     margin-top : 32px;
     box-shadow : 0px -4px 24px -18px rgba(0, 0, 0, 0.25);
     background-color : white;
-    position : fixed;
+    position : sticky;
     z-index: 1;
     bottom : 0;
 `

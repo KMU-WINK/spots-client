@@ -6,6 +6,6 @@ export const MainContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-width: 1300px;
+  // min-width: 1300px;
   // background-color : blue;
 `;
