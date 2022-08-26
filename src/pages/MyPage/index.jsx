@@ -2,14 +2,22 @@ import React, { useState, useEffect } from 'react';
 import * as styled from './styles';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import LoginModal from '../../components/LoginModal';
+import Withdrawl from '../../components/Withdrawl';
 
 const MyPage = () => {
   const [currMenu, setCurrMenu] = useState(null);
   const [prevMenu, setPrevMenu] = useState(null);
+  const [showWithdrawl, setShowWithdrawl] = useState(false);
 
   const handleClickMenu = e => {
     setCurrMenu(e.target.id);
+    if (e.target.id === "5") {
+      onSetShowWithdrawl(true);
+    }
+  };
+
+  const onSetShowWithdrawl = active => {
+    setShowWithdrawl(active);
   };
 
   useEffect(
@@ -69,6 +77,9 @@ const MyPage = () => {
             {currMenu === '4' ? <div>로그아웃</div> : null}
             {currMenu === '5' ? <div>회원 탈퇴</div> : null}
           </styled.MenuContents>
+          {showWithdrawl && (
+            <Withdrawl onSetShowWithdrawl={onSetShowWithdrawl} />
+          )}
         </styled.MenuBox>
       </styled.MyPageContainer>
       <Footer />

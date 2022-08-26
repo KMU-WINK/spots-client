@@ -14,7 +14,7 @@ export const ModalBg = styled.div`
   justify-content: center;
   width: 100vw;
   height: 100vh;
-  background-color: #3333337f;
+  background: #3333337f;
 `;
 
 export const LoginBox = styled.div`
@@ -42,7 +42,7 @@ export const CloseBtn = styled.img.attrs({
 
 export const ModalBox = styled.div`
   position: absolute;
-  background: white;
+  background: #ffffff;
   z-index: 100;
   width: 518px;
   height: 440px;
