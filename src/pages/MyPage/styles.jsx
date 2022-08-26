@@ -62,9 +62,9 @@ export const Menu = styled.div`
   outline: 0;
   background: white;
   cursor: pointer;
-  font-weight: 500;
-  font-size: 24px;
-  color: #333333;
+  font-weight: ${props => (props?.active ? '700' : '500')};
+  font-size: ${props => (props?.active ? '30px' : '24px')};
+  color: ${props => (props?.active ? '#FB1E53' : '#333333')}; ;
 `;
 
 export const MenuList = styled.div`
@@ -76,7 +76,7 @@ export const MenuList = styled.div`
 
 export const MenuContents = styled.div`
   margin: 0px 0px 0px 32px;
-  widht: 990px;
+  width: 990px;
   height: 2000px; // 임시로 넣어두었습니다.
 `;
 
