@@ -1,6 +1,7 @@
 import React from 'react';
 import MainPage from './pages/Main';
 import MyPage from './pages/MyPage';
+import MatchingPage from './pages/Matching';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 const App = () => {
@@ -9,7 +10,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/mypage" element={<MyPage />} />
-      </Routes>
+        <Route path="/matching/detail" element={<MatchingPage />} />
     </BrowserRouter>
   );
 };
