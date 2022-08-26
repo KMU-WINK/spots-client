@@ -11,6 +11,7 @@ const App = () => {
         <Route path="/" element={<MainPage />} />
         <Route path="/mypage" element={<MyPage />} />
         <Route path="/matching/detail" element={<MatchingPage />} />
+      </Routes>
     </BrowserRouter>
   );
 };
