@@ -1,369 +1,289 @@
 import styled from 'styled-components';
 import usericon from '../../imgs/icon-user-two-mono.svg';
 import togglebutton from '../../imgs/toggleBtn.svg';
-import levelpink1 from '../../imgs/level-pink.svg';
-import levelpink2 from '../../imgs/level-pink2.svg';
 import levelfull from '../../imgs/level-full.svg';
-import innertoggle from '../../imgs/innertoggle.svg';
-import acceptbtn from '../../imgs/acceptbtn.svg';
-import denybtn from '../../imgs/denybtn.svg';
-import moreapplicants from '../../imgs/more-applicants.svg';
 
 export const Container = styled.div`
-    width: 100%;
-    margin-top: 50px;
-    margin-left: 250px;
-    margin-bottom: 300px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 `;
 
 export const MatchDiv = styled.div`
-    width: 990px;
-    height: 70px;
-    background: #ffffff;
-    box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.25);
-    border-radius: 12px;
-    display: inline-block;
-    margin-top: 20px;
-    // vertical-align: center;
+  width: 990px;
+  height: 70px;
+  background: #ffffff;
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  display: inline-block;
 `;
 
 export const TextDiv = styled.div`
-    // width: 738px;
-    height: 27.28px;
-    // vertical-align: center;
-    display: flex;
-    // margin-top: 23px;
-    margin-left: 42px;
-    // padding-bottom: 30px;
-`;
-
-export const MatchName = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 22px 27px 22px 47px;
+  > span {
     font-family: 'Apple SD Gothic Neo';
-    font-weight: 700;
-    font-size: 20px;
-    margin-top: 23px;
-`;
 
+    &:nth-child(1) {
+      font-weight: 700;
+      font-size: 20px;
+      margin-right: 165px;
+    }
+    &:nth-child(2) {
+      font-weight: 700;
+      font-size: 20px;
+      margin-right: 116px;
+    }
 
-
-export const MatchDate = styled.div`
-    font-family: 'Apple SD Gothic Neo';
-    font-weight: 700;
-    font-size: 20px;
-    margin-left: 165px;
-    margin-top: 23px;
-`;
-
-export const MatchPlace = styled.div`
-    font-family: 'Apple SD Gothic Neo';
-    font-weight: 400;
-    font-size: 18px;
-    margin-left: 116px;
-    margin-top: 26.44px;
+    &:nth-child(3) {
+      font-weight: 400;
+      font-size: 18px;
+      margin-right: 110px;
+    }
+    &:nth-child(5) {
+      font-weight: 400;
+      font-size: 16px;
+      margin-right: 56px;
+    }
+    &:nth-child(6) {
+      font-weight: 700;
+      font-size: 14px;
+      color: ${props => (props.color ? props.color : '#fb1e53')};
+      margin-right: 40px;
+    }
+  }
 `;
 
 export const UserIcon = styled.img.attrs({
-    src: usericon,
+  src: usericon,
 })`
-    width: 24px;
-    height: 27.54px;
-    margin-left: 110px;
-    margin-top: 23.24px;
-`;
-
-export const MatchPeople = styled.div`
-    font-family: 'Apple SD Gothic Neo';
-    font-weight: 400;
-    font-size: 16px;
-    margin-left: 7px;
-    margin-top: 28.44px;
-`;
-
-export const MatchSuccess = styled.div`
-    // font-family: 'SF Pro';
-    // font-style: normal;
-    // font-weight: 510;
-    // font-size: 14px;
-    // line-height: 17px;
-    font-family: 'Apple SD Gothic Neo';
-    font-weight: 700;
-    font-size: 14px;
-    margin-left: 56px;
-    margin-top: 27px;
-    color: #FB1E53;
+  width: 24px;
+  height: 27.54px;
 `;
 
 export const Toggle = styled.img.attrs({
-    src: togglebutton,
+  src: togglebutton,
 })`
-    width: 12.12px;
-    height: 20px;
-    margin-top: 25px;
-    margin-left: 40px;  
+  width: 12.12px;
+  height: 20px;
+  cursor: pointer;
 `;
 
 export const MatchDivOpen = styled.div`
-    width: 990px;
-    height: 1072px;
-    background: #ffffff;
-    box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.25);
-    border-radius: 12px;
-    display: inline-block;
-    margin-top: 20px;
-    // vertical-align: center;
+  width: 990px;
+  height: 1072px;
+  background: #ffffff;
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  display: inline-block;
 `;
 
 export const InnerDiv1 = styled.div`
-    width: 100%;
-    display: flex;
-    margin-bottom: 59px;
+  width: 100%;
+  display: flex;
+  margin-bottom: 59px;
 `;
 
 export const InnerDiv1Left = styled.div`
-    width: 55%;
-    display: block;
+  width: 100%;
+  padding: 0 20px 0 46px;
+  display: flex;
+  position: relative;
+
+  > div {
+    &:nth-child(2) {
+      width: 263px;
+      height: 263px;
+      border-radius: 70%;
+      background-color: #d9d9d9;
+      position: absolute;
+      right: 98px;
+      top: 14px;
+    }
+  }
 `;
 
-export const InnerDiv1LeftText1 = styled.div`
-    margin-left: 46px;
-    font-family: Pretendard;
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 36px;
-    letter-spacing: -0.02em;
-    text-align: left;
-
+export const MatchingTitle = styled.div`
+  border-top: 1px solid #d3d3d3;
+  font-family: Pretendard;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  margin: 0 27px 14px 47px;
+  padding-top: 34px;
 `;
 
-export const InnerDiv1LeftText2 = styled.div`
-    display: flex;
-`;
+export const MatchingCount = styled.div`
+  display: flex;
 
-export const InnerDiv1LeftText3 = styled.div`
+  > span {
     font-family: 'Pretendard';
     font-style: normal;
     font-weight: 500;
-    font-size: 128px;
-    line-height: 153px;
-    /* identical to box height */
-    letter-spacing: -0.02em;
-    color: #FB1E53;
-    margin-left: 45px;
-`;
 
-export const InnerDiv1LeftText4 = styled.div`
-    font-family: 'Pretendard';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
-    /* identical to box height */
-    letter-spacing: -0.02em;
-    color: #FB1E53;
-    padding-top: 100px;
-    padding-left: 5px;
+    &:nth-child(1) {
+      font-size: 128px;
+      letter-spacing: -0.02em;
+      color: #fb1e53;
+    }
+    &:nth-child(2) {
+      font-size: 20px;
+      letter-spacing: -0.02em;
+      color: #fb1e53;
+      padding-top: 100px;
+      padding-left: 5px;
+    }
+  }
 `;
 
 export const InnerDivLevel = styled.div`
-    width: 453px;
+  width: 453px;
+  position: relative;
+  height: 45px;
+  margin-bottom: 7px;
+
+  > div {
     height: 45px;
-    margin-top: 17px;
-    position: relative;
+    position: absolute;
+    top: 0;
+
+    &:nth-child(1) {
+      border: 1px solid #d3d3d3;
+      border-radius: 20px;
+      width: 453px;
+    }
+    &:nth-child(2) {
+      width: ${props => (props.width ? props.width : '#fb1e53')};
+      background: #fb1e53;
+      border-radius: 20px;
+    }
+  }
 `;
 
 export const InnerDivLevelFull = styled.img.attrs({
-    src: levelfull,
+  src: levelfull,
 })`
-    width: 453px;
-    height: 45px;
-    position: absolute;
-    margin-left: 57px;
+  width: 453px;
+  height: 45px;
 `;
 
-export const InnerDivLevelPink1 = styled.img.attrs({
-    src: levelpink1,
-})`
-    width: 302px;
-    height: 45px;
-    position: absolute;
-    margin-left: 57px;
-`;
-
-export const InnerDivLevelPink2 = styled.img.attrs({
-    src: levelpink2,
-})`
-    width: 117px;
-    height: 45px;
-    position: absolute;
-    margin-left: 57px;
-`;
-
-
-export const InnerDivLevelText = styled.div`
+export const ProgressBarWrap = styled.div`
+  > span {
     font-family: 'Pretendard';
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: 19px;
-    /* identical to box height */
     letter-spacing: -0.02em;
     color: #333333;
-    margin-top: 7px;
-    margin-left: 63px;
+  }
+`;
+
+export const ApplicantWrap = styled.div`
+  padding: 0 20px 0 46px;
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 35px;
+  }
 `;
 
 export const ApplicantList = styled.div`
-    width: 100%;
-    display: flex;
-    margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  gap: 26px;
 `;
 
 export const InnerToggle = styled.div`
-    width: 740px;
-    height: 61px;
-    margin-left: 46px;
-    display: inline-block;
-    position: relative;
-`;
+  width: 740px;
+  gap: 70px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #fb1e53;
+  border-radius: 12px;
+  padding: 0 26px;
+  position: relative;
 
-export const InnerToggleImg = styled.img.attrs({
-    src: innertoggle,
-})`
-    width: 740px;
-    height: 61px;
-`;
-
-export const InnerToggleText1 = styled.div`
-    font-family: 'Pretendard';
+  > span {
     font-style: normal;
+    font-style: normal;
+    font-family: 'Pretendard';
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
     color: #171717;
+  }
+  > img {
     position: absolute;
-    top: 21px;
-    left: 26px;
-`;
-
-export const InnerToggleText2 = styled.div`
-    font-family: 'Pretendard';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
-    color: #171717;
-    position: absolute;
-    top: 21px;
-    left: 185px;
-`;
-
-export const InnerToggleText3 = styled.div`
-    font-family: 'Pretendard';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
-    color: #171717;
-    position: absolute;
-    top: 21px;
-    left: 289px;
-`;
-
-export const InnerToggleText4 = styled.div`
-    font-family: 'Pretendard';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
-    color: #171717;
-    position: absolute;
-    top: 21px;
-    left: 373px;
+    right: 26px;
+    cursor: pointer;
+  }
 `;
 
 export const InnerToggleBtn = styled.img.attrs({
-    src: togglebutton,
+  src: togglebutton,
 })`
-    width: 12.12px;
-    height: 20px;
-    position: absolute;
-    top: 22px;
-    left: 695px;
+  width: 12.12px;
+  height: 20px;
 `;
 
-export const AcceptBtn = styled.div`
-    width: 72px;
-    height: 61px;
-    display: inline-block;
-    position: relative;
-    text-align: center;
-    vertical-align: middle;
-    margin-left: 26px;
+export const buttons = styled.div`
+  display: flex;
+  gap: 14px;
+
+  > button {
+    all: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &:nth-child(1) {
+      width: 72px;
+      height: 61px;
+      background-color: #fb1e53;
+      border-radius: 12px;
+      font-family: 'Pretendard';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: -0.05em;
+      color: #ffffff;
+    }
+    &:nth-child(2) {
+      width: 72px;
+      height: 61px;
+      background-color: #333333;
+      border-radius: 12px;
+      font-family: 'Pretendard';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: -0.05em;
+      color: #ffffff;
+    }
+  }
 `;
 
-export const AcceptBtnImg = styled.img.attrs({
-    src: acceptbtn,
-})`
-    width: 72px;
-    height: 61px;
-    
-`;
-
-export const AcceptBtnText = styled.div`
-    font-family: 'Pretendard';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
-    /* identical to box height */
-    letter-spacing: -0.05em;
-    color: #FFFFFF;
-    text-align: center;
-    position: absolute;
-    top: 21px;
-    left: 22px;
-`;
-
-
-export const DenyBtn = styled.div`
-    width: 72px;
-    height: 61px;
-    display: inline-block;
-    position: relative;
-    text-align: center;
-    vertical-align: middle;
-    margin-left: 14px;
-`;
-
-export const DenyBtnImg = styled.img.attrs({
-    src: denybtn,
-})`
-    width: 72px;
-    height: 61px;
-    
-`;
-
-export const DenyBtnText = styled.div`
-    font-family: 'Pretendard';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
-    /* identical to box height */
-    letter-spacing: -0.05em;
-    color: #FFFFFF;
-    text-align: center;
-    position: absolute;
-    top: 21px;
-    left: 23px;
-`;
-
-
-export const MoreApplicantsImg = styled.img.attrs({
-    src: moreapplicants,
-})`
-    width: 892px;
-    height: 74px;
-    margin-left: 49px;
-    margin-top: 15px; 
+export const moreApplicant = styled.button`
+  all: unset;
+  width: 100%;
+  background: #fb1e53;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 24px;
+  color: #ffffff;
+  padding: 22px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 `;
