@@ -5,6 +5,7 @@ import LoginModal from '../LoginModal';
 const Header = () => {
   const [showLogin, setShowLogin] = useState(false);
   const onSetShowLogin = active => {
+    console.log('클릭');
     setShowLogin(active);
   };
 
