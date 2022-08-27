@@ -12,7 +12,8 @@ export const Container = styled.div`
 
 export const MatchDiv = styled.div`
   width: 990px;
-  height: 70px;
+  height: ${props => (props?.open ? 'auto' : '72px')};
+  ${props => props?.open && `padding-bottom: 20px`};
   background: #ffffff;
   box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.25);
   border-radius: 12px;
@@ -69,6 +70,8 @@ export const Toggle = styled.img.attrs({
   width: 12.12px;
   height: 20px;
   cursor: pointer;
+  margin-left: auto;
+  margin-right: 10px;
 `;
 
 export const MatchDivOpen = styled.div`
@@ -91,18 +94,7 @@ export const InnerDiv1Left = styled.div`
   padding: 0 20px 0 46px;
   display: flex;
   position: relative;
-
-  > div {
-    &:nth-child(2) {
-      width: 263px;
-      height: 263px;
-      border-radius: 70%;
-      background-color: #d9d9d9;
-      position: absolute;
-      right: 98px;
-      top: 14px;
-    }
-  }
+  gap: 100px;
 `;
 
 export const MatchingTitle = styled.div`
@@ -201,28 +193,37 @@ export const ApplicantList = styled.div`
 `;
 
 export const InnerToggle = styled.div`
-  width: 740px;
-  gap: 70px;
+  width: auto;
   display: flex;
+  flex-direction: column;
   align-items: center;
   border: 1px solid #fb1e53;
   border-radius: 12px;
-  padding: 0 26px;
-  position: relative;
+  ${props => props?.open && `padding-bottom: 20px`};
+  > div:first-child {
+    width: 660px;
+    height: 60px;
+    gap: 70px;
+    display: flex;
+    align-items: center;
+    padding: 0 26px;
+    position: relative;
 
-  > span {
-    font-style: normal;
-    font-style: normal;
-    font-family: 'Pretendard';
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
-    color: #171717;
-  }
-  > img {
-    position: absolute;
-    right: 26px;
-    cursor: pointer;
+    > span {
+      font-style: normal;
+      font-style: normal;
+      font-family: 'Pretendard';
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      color: #171717;
+    }
+
+    > img {
+      position: absolute;
+      right: 26px;
+      cursor: pointer;
+    }
   }
 `;
 
@@ -271,6 +272,17 @@ export const buttons = styled.div`
       color: #ffffff;
     }
   }
+
+  > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    width: 158px;
+    height: 61px;
+    border: 1px solid ${props => (props?.active ? '#FB1E53' : '#858585')};
+    color: ${props => (props?.active ? '#FB1E53' : '#858585')};
+  }
 `;
 
 export const moreApplicant = styled.button`
@@ -286,4 +298,31 @@ export const moreApplicant = styled.button`
   align-items: center;
   justify-content: center;
   cursor: pointer;
+`;
+
+export const ApplicantInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 660px;
+  height: 570px;
+  border-top: 1px solid #d3d3d3;
+  > h3 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+  > div:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #d3d3d3;
+    opacity: 0.2;
+    height: 110px;
+    border-radius: 5px;
+    > span {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
 `;
