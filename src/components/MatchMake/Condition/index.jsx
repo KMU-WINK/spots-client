@@ -454,7 +454,7 @@ const Condition = () => {
                             매칭을 원하는 운동 레벨을 선택해주세요.
                         </styled.OptionInfo>
                     </styled.Option>
-                    <styled.OptionBtn onClick={onRotate} onMouseOut={updateRotate("")} name="level">
+                    <styled.OptionBtn onClick={onRotate} name="level">
                         {level}
                             {
                                 isRotate["level"]

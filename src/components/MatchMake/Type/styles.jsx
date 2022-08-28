@@ -15,14 +15,6 @@ export const eachSports = styled.button`
     background : none;
 `
 
-export const sportsText = styled.span`
-    margin-top : 6px;
-    font-size : 14px;
-    line-height : 17px;
-    font-weight: 500;
-    font-style: normal;
-`
-
 export const sports_img = styled.img.attrs(props => ({
     src: props.src,
     path : props.src.path,
