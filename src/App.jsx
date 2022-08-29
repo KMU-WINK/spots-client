@@ -1,7 +1,8 @@
 import React from 'react';
 import MainPage from './pages/Main';
 import MakePage from './pages/Make';
-import Test from './components/Profile';
+import TestProfile from './components/Profile/profile';
+import TestProfileEdit from './components/Profile/editProfile';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 const App = () => {
@@ -10,7 +11,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/matching/make" element={<MakePage />} />
-        <Route path="/test" element={<Test />} />
+        <Route path="/test" element={<TestProfile />} />
+        <Route path="/testEdit" element={<TestProfileEdit />} />
       </Routes>
     </BrowserRouter>
   );
