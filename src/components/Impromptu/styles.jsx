@@ -90,6 +90,7 @@ export const MeetingBox = styled.div`
   background: #333333;
   border-radius: 12px;
   padding: 45px 0px 18px;
+  cursor: pointer;
 `;
 
 export const MeetingName = styled.div`
