@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import GlobalStyleProfile from './GlobalStyleProfile';
 import * as styled from './styles';
-import {Basketball, Football, Baseball, Volleyball, AFootball, Tennis, Etc} from '../MatchMake/sports';
+import {Basketball, Football, Baseball, Volleyball, AFootball, Tennis, Etc} from './sports';
 
 const editProfile = () => {
 

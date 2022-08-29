@@ -123,7 +123,7 @@ export const PlaceAddress = styled.p`
 
 export const publicContainer = styled.div`
   display : flex;
-  margin-top : ${(props) => props.marginTop || "024x"};
+  margin-top : ${(props) => props.marginTop || "24px"};
   align-items : center;
 `
 
@@ -169,6 +169,21 @@ export const EachSports = styled.button`
     margin-right : 70px;
     border : none;
     background : none;
+`
+
+export const SportsBox = styled.div`
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+`
+
+export const sportsText = styled.span`
+    margin-top : 6px;
+    font-size : 14px;
+    line-height : 17px;
+    font-weight: 800;
+    font-style: normal;
+    color: ${(props) => props.fontColor || "#858585"};
 `
 
 export const ButtonContainer = styled.div`
