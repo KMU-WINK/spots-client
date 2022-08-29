@@ -14,6 +14,7 @@ import tennis from '../../imgs/icon-tennis.svg';
 import baseball from '../../imgs/icon-baseball.svg';
 import volleyball from '../../imgs/icon-volleyball.svg';
 import badge from '../../imgs/badge.svg';
+import map from '../../imgs/map.png';
 
 export const FlexBox = styled.div`
   display: flex;
@@ -332,8 +333,9 @@ export const TempMap = styled.div`
   margin: 24px 0px 30px 0px;
   width: 186px;
   height: 185px;
-  border: 1px solid #d9d9d9;
+  //border: 1px solid #d9d9d9;
   float: right;
+  background: url(${map}) center no-repeat;
 `;
 export const Preference = styled.div`
   padding: 8px 0px 30px 0px;

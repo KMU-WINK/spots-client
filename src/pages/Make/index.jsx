@@ -4,16 +4,16 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Banner from '../../components/Banner';
 import MatchMake from '../../components/MatchMake';
-import MatchingRegister from '../../components/MatchingRegister'
+import MatchingRegister from '../../components/MatchingRegister';
 
 const MakePage = () => {
   return (
     <styled.MainContainer>
       <Header />
-      <Banner />
+      <styled.Background />
       <MatchMake />
       <Footer />
-    </ styled.MainContainer>
+    </styled.MainContainer>
   );
 };
 

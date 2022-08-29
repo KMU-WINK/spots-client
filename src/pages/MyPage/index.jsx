@@ -6,6 +6,7 @@ import Footer from '../../components/Footer';
 import Withdrawl from '../../components/Withdrawl';
 import AppliedMatching from '../../components/AppliedMatching';
 import MatchInfo from '../../components/MatchInfo';
+import Profile from '../../components/Profile/profile';
 
 const MyPage = () => {
   const [currMenu, setCurrMenu] = useState('1');
@@ -87,9 +88,7 @@ const MyPage = () => {
           </styled.MenuList>
           <styled.MenuContents>
             {(currMenu === '1' || prevMenu === '1') && <AppliedMatching />}
-            {currMenu === '2' || prevMenu === '2' ? (
-              <div>프로필 수정</div>
-            ) : null}
+            {(currMenu === '2' || prevMenu === '2') && <Profile />}
             {(currMenu === '3' || prevMenu === '3') && <MatchInfo />}
             {currMenu === '4' || prevMenu === '4' ? <div>로그아웃</div> : null}
           </styled.MenuContents>
