@@ -3,10 +3,12 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import * as styled from './styles';
 import $ from 'jquery';
+import { useNavigate } from 'react-router-dom';
 
 const MatchingPage = () => {
   const [isShowHost, setIsShowHost] = useState(false);
   const [isShowCondition, setIsShowCondition] = useState(false);
+  const navigator = useNavigate();
 
   const currentMember = 2;
   const maxMember = 4;
@@ -100,7 +102,7 @@ const MatchingPage = () => {
         호스트가 선호하는 운동
       </styled.ExtraBoldText>
       <styled.Preference>
-      {' '}
+        {' '}
         {basketball ? <styled.Basketball /> : null}
         {rugby ? <styled.Rugby /> : null}
         {soccer ? <styled.Soccer /> : null}
@@ -235,7 +237,13 @@ const MatchingPage = () => {
               </styled.SemiBoldText>
             </styled.Member>
             <styled.Progress value={currentMember} max={maxMember} />
-            <styled.MatchingButton>매칭 신청하기</styled.MatchingButton>
+            <styled.MatchingButton
+              onClick={() => {
+                navigator('/mypage');
+              }}
+            >
+              매칭 신청하기
+            </styled.MatchingButton>
           </styled.QuickMenuContent>
         </styled.QuickMenu>
       </styled.Matching>

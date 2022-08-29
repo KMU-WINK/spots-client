@@ -72,6 +72,7 @@ export const Toggle = styled.img.attrs({
   cursor: pointer;
   margin-left: auto;
   margin-right: 10px;
+  transform: ${props => props?.open && 'rotate(0.5turn)'};
 `;
 
 export const MatchDivOpen = styled.div`
@@ -232,6 +233,7 @@ export const InnerToggleBtn = styled.img.attrs({
 })`
   width: 12.12px;
   height: 20px;
+  transform: ${props => props?.open && 'rotate(0.5turn)'};
 `;
 
 export const buttons = styled.div`
@@ -324,5 +326,34 @@ export const ApplicantInfo = styled.div`
       font-size: 24px;
       line-height: 29px;
     }
+  }
+`;
+
+export const Nav = styled.nav`
+  display: flex;
+  width: 100%;
+  gap: 80px;
+  justify-content: center;
+  padding-top: 60px;
+`;
+
+export const Button = styled.button`
+  font-family: 'SF Pro';
+  font-weight: 400;
+  font-size: 24px;
+  cursor: pointer;
+  background: white;
+  border: white;
+  color: #171717;
+  opacity: 0.5;
+
+  &[aria-current] {
+    font-family: 'SF Pro';
+    font-style: italic;
+    font-weight: 858;
+    text-decoration-line: underline;
+    cursor: pointer;
+    color: #fb1e53;
+    opacity: 1;
   }
 `;

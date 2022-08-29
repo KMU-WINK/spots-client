@@ -1,16 +1,21 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import * as styled from './styles';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Withdrawl from '../../components/Withdrawl';
+import AppliedMatching from '../../components/AppliedMatching';
+import MatchInfo from '../../components/MatchInfo';
 
 const MyPage = () => {
   const [currMenu, setCurrMenu] = useState('1');
   const [prevMenu, setPrevMenu] = useState(null);
   const [showWithdrawl, setShowWithdrawl] = useState(false);
-
+  const navigator = useNavigate();
   const handleClickMenu = e => {
-    console.log(prevMenu);
+    if (e.target.id === '4') {
+      navigator('/');
+    }
     if (e.target.id === '5') {
       onSetShowWithdrawl(true);
       setPrevMenu(currMenu);
@@ -81,15 +86,11 @@ const MyPage = () => {
             </styled.Menu>
           </styled.MenuList>
           <styled.MenuContents>
-            {currMenu === '1' || prevMenu === '1' ? (
-              <div>지원한 매칭</div>
-            ) : null}
+            {(currMenu === '1' || prevMenu === '1') && <AppliedMatching />}
             {currMenu === '2' || prevMenu === '2' ? (
               <div>프로필 수정</div>
             ) : null}
-            {currMenu === '3' || prevMenu === '3' ? (
-              <div>내가 쓴 게시물</div>
-            ) : null}
+            {(currMenu === '3' || prevMenu === '3') && <MatchInfo />}
             {currMenu === '4' || prevMenu === '4' ? <div>로그아웃</div> : null}
           </styled.MenuContents>
           {showWithdrawl && (

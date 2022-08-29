@@ -17,9 +17,12 @@ export const Logo = styled.img.attrs({
 })`
   width: 124px;
   height: 60px;
+  cursor: pointer;
 `;
 
 export const RegistBox = styled.div`
+  cursor: pointer;
+
   display: flex;
   font-size: 16px;
   justify-content: center;
@@ -28,7 +31,6 @@ export const RegistBox = styled.div`
 `;
 
 export const Login = styled.div`
-  cursor: pointer;
   padding-right: 10px;
 `;
 

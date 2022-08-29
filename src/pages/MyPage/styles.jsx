@@ -12,15 +12,18 @@ export const MyPage = styled.div`
 
 export const MyPageContainer = styled.div`
   margin-top: 70px;
-  width: 1194px;
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
 `;
 
 export const ProfileBox = styled.div`
   display: flex;
+  gap: 30px;
 `;
 
 export const Profile = styled.div`
-  margin: 31px;
   position: relative;
   width: 174px;
   height: 161px;
@@ -68,18 +71,19 @@ export const Menu = styled.div`
 `;
 
 export const MenuList = styled.div`
-  margin: 32px 0px 0px 35px;
   ${Menu}:not(:last-of-type) {
     margin: 0px 0px 32px 0px;
   }
 `;
 
 export const MenuContents = styled.div`
-  margin: 0px 0px 0px 32px;
   width: 990px;
-  height: 2000px; // 임시로 넣어두었습니다.
+  padding-bottom: 50px;
 `;
 
 export const MenuBox = styled.div`
   display: flex;
+  //justify-content: space-between;
+  //justify-content: flex-end;
+  gap: 30px;
 `;

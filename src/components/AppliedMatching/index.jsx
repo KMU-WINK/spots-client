@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import * as styled from './styles';
+import Chart from '../Chart';
 
 const Pagination = ({ total, limit, page, setPage }) => {
   const numPages = Math.ceil(total / limit);
@@ -128,13 +129,7 @@ const MatchingMenu = props => {
           <styled.ClickedHostBox>
             <styled.ClickedBox>
               <styled.ClickedRadialChart>
-                <styled.Chart
-                  data={myData}
-                  width={263.66}
-                  height={263.66}
-                  colorRange={color}
-                  showLabels={true}
-                />
+                <Chart size="260px" />
                 <styled.GenderRatio>남녀 성비</styled.GenderRatio>
               </styled.ClickedRadialChart>
               <div>

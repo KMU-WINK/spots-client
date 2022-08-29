@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import * as styled from './styles';
+import { useNavigate } from 'react-router-dom';
 
 const Pagination = ({ total, limit, page, setPage }) => {
   const numPages = Math.ceil(total / limit);
@@ -64,6 +65,7 @@ const MatchList = () => {
   const [posts, setPosts] = useState([]);
   const [limit, setLimit] = useState(10);
   const [page, setPage] = useState(1);
+  const navigator = useNavigate();
 
   const onClick = e => {
     setCurrentClick(e.target.id);
@@ -129,87 +131,22 @@ const MatchList = () => {
         <styled.Filters>마감제외</styled.Filters>
       </styled.FilterContainer>
       <styled.MatchListContainer>
-        <styled.MatchLists>
-          <styled.MatchName>모임 이름</styled.MatchName>
-          <styled.MatchDate>07.08/17:00</styled.MatchDate>
-          <styled.MatchPlace>모임 장소</styled.MatchPlace>
-          <styled.MatchStatus>
-            <styled.MatchIcon />
-            <styled.MatchNumber>인원 (1/5)</styled.MatchNumber>
-          </styled.MatchStatus>
-        </styled.MatchLists>
-        <styled.MatchLists>
-          <styled.MatchName>모임 이름</styled.MatchName>
-          <styled.MatchDate>07.08/17:00</styled.MatchDate>
-          <styled.MatchPlace>모임 장소</styled.MatchPlace>
-          <styled.MatchStatus>
-            <styled.MatchIcon />
-            <styled.MatchNumber>인원 (1/5)</styled.MatchNumber>
-          </styled.MatchStatus>
-        </styled.MatchLists>
-        <styled.MatchLists>
-          <styled.MatchName>모임 이름</styled.MatchName>
-          <styled.MatchDate>07.08/17:00</styled.MatchDate>
-          <styled.MatchPlace>모임 장소</styled.MatchPlace>
-          <styled.MatchStatus>
-            <styled.MatchIcon />
-            <styled.MatchNumber>인원 (1/5)</styled.MatchNumber>
-          </styled.MatchStatus>
-        </styled.MatchLists>
-        <styled.MatchLists>
-          <styled.MatchName>모임 이름</styled.MatchName>
-          <styled.MatchDate>07.08/17:00</styled.MatchDate>
-          <styled.MatchPlace>모임 장소</styled.MatchPlace>
-          <styled.MatchStatus>
-            <styled.MatchIcon />
-            <styled.MatchNumber>인원 (1/5)</styled.MatchNumber>
-          </styled.MatchStatus>
-        </styled.MatchLists>
-        <styled.MatchLists>
-          <styled.MatchName>모임 이름</styled.MatchName>
-          <styled.MatchDate>07.08/17:00</styled.MatchDate>
-          <styled.MatchPlace>모임 장소</styled.MatchPlace>
-          <styled.MatchStatus>
-            <styled.MatchIcon />
-            <styled.MatchNumber>인원 (1/5)</styled.MatchNumber>
-          </styled.MatchStatus>
-        </styled.MatchLists>
-        <styled.MatchLists>
-          <styled.MatchName>모임 이름</styled.MatchName>
-          <styled.MatchDate>07.08/17:00</styled.MatchDate>
-          <styled.MatchPlace>모임 장소</styled.MatchPlace>
-          <styled.MatchStatus>
-            <styled.MatchIcon />
-            <styled.MatchNumber>인원 (1/5)</styled.MatchNumber>
-          </styled.MatchStatus>
-        </styled.MatchLists>
-        <styled.MatchLists>
-          <styled.MatchName>모임 이름</styled.MatchName>
-          <styled.MatchDate>07.08/17:00</styled.MatchDate>
-          <styled.MatchPlace>모임 장소</styled.MatchPlace>
-          <styled.MatchStatus>
-            <styled.MatchIcon />
-            <styled.MatchNumber>인원 (1/5)</styled.MatchNumber>
-          </styled.MatchStatus>
-        </styled.MatchLists>
-        <styled.MatchLists>
-          <styled.MatchName>모임 이름</styled.MatchName>
-          <styled.MatchDate>07.08/17:00</styled.MatchDate>
-          <styled.MatchPlace>모임 장소</styled.MatchPlace>
-          <styled.MatchStatus>
-            <styled.MatchIcon />
-            <styled.MatchNumber>인원 (1/5)</styled.MatchNumber>
-          </styled.MatchStatus>
-        </styled.MatchLists>
-        <styled.MatchLists>
-          <styled.MatchName>모임 이름</styled.MatchName>
-          <styled.MatchDate>07.08/17:00</styled.MatchDate>
-          <styled.MatchPlace>모임 장소</styled.MatchPlace>
-          <styled.MatchStatus>
-            <styled.MatchIcon />
-            <styled.MatchNumber>인원 (1/5)</styled.MatchNumber>
-          </styled.MatchStatus>
-        </styled.MatchLists>
+        {[1, 2, 3, 4, 5, 6, 7, 8, 9].map(key => (
+          <styled.MatchLists
+            onClick={() => {
+              navigator('/matching/detail');
+            }}
+            key={key}
+          >
+            <styled.MatchName>모임 이름</styled.MatchName>
+            <styled.MatchDate>07.08/17:00</styled.MatchDate>
+            <styled.MatchPlace>모임 장소</styled.MatchPlace>
+            <styled.MatchStatus>
+              <styled.MatchIcon />
+              <styled.MatchNumber>인원 (1/5)</styled.MatchNumber>
+            </styled.MatchStatus>
+          </styled.MatchLists>
+        ))}
       </styled.MatchListContainer>
       <Pagination total={30} limit={9} page={page} setPage={setPage} />
     </styled.Container>

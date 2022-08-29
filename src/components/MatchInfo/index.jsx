@@ -3,7 +3,39 @@ import * as styled from './styles';
 import TimeTable from '../TimeTable';
 import Chart from '../Chart';
 
+const Pagination = ({ total, limit, page, setPage }) => {
+  const numPages = Math.ceil(total / limit);
+
+  return (
+    <>
+      <styled.Nav>
+        <styled.Button onClick={() => setPage(page - 1)} disabled={page === 1}>
+          &lt;
+        </styled.Button>
+        {Array(numPages)
+          .fill()
+          .map((_, i) => (
+            <styled.Button
+              key={i + 1}
+              onClick={() => setPage(i + 1)}
+              aria-current={page === i + 1 ? 'page' : null}
+            >
+              {i + 1}
+            </styled.Button>
+          ))}
+        <styled.Button
+          onClick={() => setPage(page + 1)}
+          disabled={page === numPages}
+        >
+          &gt;
+        </styled.Button>
+      </styled.Nav>
+    </>
+  );
+};
+
 const MatchInfo = () => {
+  const [page, setPage] = useState(1);
   const [openStatus, setOpenStatus] = useState({
     1: false,
     2: false,
@@ -74,7 +106,6 @@ const MatchInfo = () => {
       ...openStatus,
       [e.target.name]: !openStatus[e.target.name],
     });
-    console.log(openStatus);
   };
 
   const innerOpenHandler = e => {
@@ -101,7 +132,6 @@ const MatchInfo = () => {
         ],
       },
     });
-    console.log(innerOpenStatus);
   };
 
   const OpenInfo = props => {
@@ -158,6 +188,7 @@ const MatchInfo = () => {
                         id={props.listNum}
                         name={num}
                         onClick={innerOpenHandler}
+                        open={innerOpenStatus[props.listNum][num][0]}
                       />
                     </div>
                     {innerOpenStatus[props.listNum][num][0] && (
@@ -305,7 +336,11 @@ const MatchInfo = () => {
           <styled.UserIcon />
           <span>인원 (5/5)</span>
           <span>모집중</span>
-          <styled.Toggle name="1" onClick={openHandler} />
+          <styled.Toggle
+            name="1"
+            onClick={openHandler}
+            open={openStatus['1']}
+          />
         </styled.TextDiv>
         {openStatus['1'] && <OpenInfo listNum={1} />}
       </styled.MatchDiv>
@@ -318,7 +353,11 @@ const MatchInfo = () => {
           <styled.UserIcon />
           <span>인원 (5/5)</span>
           <span>모집중</span>
-          <styled.Toggle name="2" onClick={openHandler} />
+          <styled.Toggle
+            name="2"
+            onClick={openHandler}
+            open={openStatus['2']}
+          />
         </styled.TextDiv>
         {openStatus['2'] && <OpenInfo listNum={2} />}
       </styled.MatchDiv>
@@ -331,7 +370,11 @@ const MatchInfo = () => {
           <styled.UserIcon />
           <span>인원 (5/5)</span>
           <span>매칭확정</span>
-          <styled.Toggle name="3" onClick={openHandler} />
+          <styled.Toggle
+            name="3"
+            onClick={openHandler}
+            open={openStatus['3']}
+          />
         </styled.TextDiv>
         {openStatus['3'] && <OpenInfo listNum={3} />}
       </styled.MatchDiv>
@@ -344,7 +387,11 @@ const MatchInfo = () => {
           <styled.UserIcon />
           <span>인원 (5/5)</span>
           <span>매칭확정</span>
-          <styled.Toggle name="4" onClick={openHandler} />
+          <styled.Toggle
+            name="4"
+            onClick={openHandler}
+            open={openStatus['4']}
+          />
         </styled.TextDiv>
         {openStatus['4'] && <OpenInfo listNum={4} />}
       </styled.MatchDiv>
@@ -357,10 +404,15 @@ const MatchInfo = () => {
           <styled.UserIcon />
           <span>인원 (5/5)</span>
           <span>매칭취소</span>
-          <styled.Toggle name="5" onClick={openHandler} />
+          <styled.Toggle
+            name="5"
+            onClick={openHandler}
+            open={openStatus['5']}
+          />
         </styled.TextDiv>
         {openStatus['5'] && <OpenInfo listNum={5} />}
       </styled.MatchDiv>
+      <Pagination total={30} limit={9} page={page} setPage={setPage} />
     </styled.Container>
   );
 };

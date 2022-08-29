@@ -16,7 +16,6 @@ export const Container = styled.div`
   height: 100%;
   justify-content: center;
   align-items: center;
-  margin: 100px;
 `;
 
 export const MatchingBox = styled.div`
