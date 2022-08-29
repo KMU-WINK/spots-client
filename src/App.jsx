@@ -8,6 +8,7 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<MainPage />} />
+        <Route path="/test" element={<AppliedMatching />} />
       </Routes>
     </BrowserRouter>
   );

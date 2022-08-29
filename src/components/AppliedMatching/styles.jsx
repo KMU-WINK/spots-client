@@ -26,7 +26,7 @@ export const MatchingBox = styled.div`
   background: #ffffff;
   box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.25);
   border-radius: 12px;
-  cursor: pointer;
+
   margin-bottom: 20px;
 `;
 
@@ -81,7 +81,7 @@ export const MatchIcon = styled.img.attrs({
 })`
   width: 24px;
   height: 27.5px;
-  padding: 22px 0px 0px 110px;
+  margin: 22px 0px 0px 110px;
   opacity: ${props => props.opacity || '1px'};
 `;
 
@@ -113,8 +113,9 @@ export const DownIcon = styled.img.attrs({
 })`
   width: 20px;
   height: 20px;
-  padding: 25px 0px 0px 50px;
+  margin: 25px 0px 0px 50px;
   opacity: ${props => props.opacity || '1px'};
+  cursor: ${props => props.disable || 'pointer'};
 `;
 
 export const UpIcon = styled.img.attrs({
@@ -122,8 +123,9 @@ export const UpIcon = styled.img.attrs({
 })`
   width: 20px;
   height: 20px;
-  padding: 25px 0px 0px 50px;
+  margin: 25px 0px 0px 50px;
   opacity: ${props => props.opacity || '1px'};
+  cursor: pointer;
 `;
 
 export const ClickedMatchingBox = styled.div`
@@ -282,6 +284,7 @@ export const ContactHost = styled.button`
   text-align: center;
   color: #ffffff;
   margin: 38px 0px 0px 228.5px;
+  cursor: pointer;
 `;
 
 export const ClikedApplied = styled.div`
