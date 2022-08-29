@@ -306,16 +306,49 @@ export const Colon = styled.p`
   vertical-align: center;
 `;
 
-export const AddBtn = styled.button`
+export const Btn = styled.button`
   border-radius: 12px;
   width: 168px;
   height: 56px;
   border: none;
-  background-color: #fb1e53;
+  background-color: ${props => props.backColor || '#fb1e53'};
   font-size: 24px;
   font-weight: 700;
   color: white;
 `;
+
+// 추가된 시간
+export const ScheduleContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  border-radius: 12px;
+  margin-top: 12px;
+  padding: 16px 32px 20px 40px;
+  // justify-content : space-between;
+`
+
+export const ScheduleBox = styled.div`
+  display : flex;
+  justify-content : space-between;
+  margin-top: 20px;
+`
+
+export const Schedule = styled.div`
+  display : flex;
+  margin-top : 12px;
+`
+
+export const TimeInform = styled.span`
+  font-size: 24px;
+  line-height : 29px;
+  font-weight: 500;
+  margin-left : ${props => props.marginLeft || '0px'};
+`
+
+
 
 export const LocationGetBox = styled.div`
   display: flex;

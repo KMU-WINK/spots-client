@@ -11,6 +11,7 @@ import {
 } from './sports';
 import TimeTable from '../TimeTable';
 import Etc from '../../imgs/MatchMake/sports_img/sports_etc.svg';
+import { keyframes } from 'styled-components';
 
 const editProfile = () => {
   const weekList = ['월', '화', '수', '목', '금', '토', '일'];
@@ -20,12 +21,60 @@ const editProfile = () => {
     setWeek(e.target.value);
   };
 
-  const [hour, setHour] = useState('');
-  const [minute, setMinute] = useState('');
+  const [startHour, setStartHour] = useState('');
+  const [startMinute, setStartMinute] = useState('');
+  const [endHour, setEndHour] = useState('');
+  const [endMinute, setEndMinute] = useState('');
 
-  const onHourHandler = e => {};
+  const onStartHourHandler = e => {
+    setStartHour(e.target.value)
+  };
+  const onStartMinuteHandler = e => {
+    setStartMinute(e.target.value)
+  };
+  const onEndHourHandler = e => {
+    setEndHour(e.target.value)
+  };
+  const onEndMinuteHandler = e => {
+    setEndMinute(e.target.value)
+  };
 
-  const onMinuteHandler = e => {};
+  const [scheduleList, setScheduleList] = useState([
+    {  "id" : 1, 
+      "day" : "월",
+      "time" : "10:00 ~ 13:00"},
+])
+
+  const onAddSchedule = e => {
+    if (startHour=="" || startMinute=="" || endHour=="" || endMinute==""){
+      alert("시간을 모두 입력해 주세요.")
+    } else {
+      var id = 1;
+      if (scheduleList.length) {
+        id = scheduleList[scheduleList.length-1]["id"]+1
+      }
+      const day = week;
+      const time = startHour+':'+startMinute+" ~ "+endHour+':'+endMinute
+      const newSchedule = {
+        "id" : id,
+        "day" : day,
+        "time" : time
+      }
+      setScheduleList([...scheduleList, newSchedule])
+      setStartHour('')
+      setStartMinute('')
+      setEndHour('')
+      setEndMinute('')
+    }
+  }
+
+  const onDeleteSchedule = e => {
+    const id = e.currentTarget.name
+    console.log(id)
+    setScheduleList(scheduleList.filter(item => item.id!=id))
+    console.log(scheduleList)
+  }
+
 
   const [getLocation, setGetLocation] = useState('');
   const clearGetLocation = () => {
@@ -35,10 +84,6 @@ const editProfile = () => {
   const getLocationHandler = e => {
     const location = e.target.value;
     setGetLocation(location);
-    // setIsValidate(prevState => ({
-    //     ...prevState,
-    //     "isLocationValidate" : (location.length) ? true : false,
-    // }))
   };
 
   const [isSelect, setIsSelect] = useState({
@@ -89,16 +134,16 @@ const editProfile = () => {
               <styled.TimeGet marginLeft="32px">
                 <styled.TimeGetTime
                   placeholder="17"
-                  onChange={onHourHandler}
-                  value={hour}
+                  onChange={onStartHourHandler}
+                  value={startHour}
                   maxLength={2}
                 />
                 <styled.Colon>:</styled.Colon>
                 <styled.TimeGetTime
                   placeholder="00"
                   direction="right"
-                  onChange={onMinuteHandler}
-                  value={minute}
+                  onChange={onStartMinuteHandler}
+                  value={startMinute}
                   maxLength={2}
                 />
               </styled.TimeGet>
@@ -108,16 +153,16 @@ const editProfile = () => {
               <styled.TimeGet marginLeft="20px">
                 <styled.TimeGetTime
                   placeholder="18"
-                  onChange={onHourHandler}
-                  value={hour}
+                  onChange={onEndHourHandler}
+                  value={endHour}
                   maxLength={2}
                 />
                 <styled.Colon>:</styled.Colon>
                 <styled.TimeGetTime
                   placeholder="00"
                   direction="right"
-                  onChange={onMinuteHandler}
-                  value={minute}
+                  onChange={onEndMinuteHandler}
+                  value={endMinute}
                   maxLength={2}
                 />
               </styled.TimeGet>
@@ -126,9 +171,31 @@ const editProfile = () => {
               ※ 최소 1시간 단위로 운동 시간을 입력해주세요.
             </styled.Inform>
           </styled.TimeGetContainer>
-          <styled.AddBtn>추가하기+</styled.AddBtn>
+          <styled.Btn onClick={onAddSchedule}>추가하기+</styled.Btn>
         </styled.AddTimeBox>
       </styled.EnterTimeContainer>
+
+
+      <styled.ScheduleContainer>
+
+
+
+        {scheduleList.map( (item,index) => (
+          <styled.ScheduleBox key={index}>
+            <styled.Schedule>
+              <styled.CalendarCheck />
+              <styled.TimeInform marginLeft="32px">
+                {item["day"]}
+              </styled.TimeInform>
+              <styled.TimeInform marginLeft="16px">
+                {item["time"]}
+              </styled.TimeInform>
+            </styled.Schedule>
+            <styled.Btn backColor="#858585" name={item["id"]} onClick={onDeleteSchedule}>삭제하기-</styled.Btn>
+          </styled.ScheduleBox>
+        ))}
+
+      </styled.ScheduleContainer>
 
       <styled.TimeTableContainer>
         <TimeTable />
