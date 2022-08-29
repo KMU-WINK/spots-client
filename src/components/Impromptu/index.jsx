@@ -1,5 +1,6 @@
 import React from 'react';
 import * as styled from './styles';
+import { useNavigate } from 'react-router-dom';
 
 function NextArrow(props) {
   const { className, onClick } = props;
@@ -20,6 +21,7 @@ function PrevArrow(props) {
 }
 
 const Impromptu = () => {
+  const navigator = useNavigate();
   const settings = {
     dots: false,
     infinite: true,
@@ -40,7 +42,11 @@ const Impromptu = () => {
           오늘 뜬 번개 모임 : <styled.ImpromptuImg />
         </styled.ImpromptuText>
         <styled.StyledSlider {...settings}>
-          <styled.MeetingBox>
+          <styled.MeetingBox
+            onClick={() => {
+              navigator('/matching/detail');
+            }}
+          >
             <styled.MeetingName>모임 이름</styled.MeetingName>
             <styled.MeetingDate>07.08/17:00</styled.MeetingDate>
             <styled.MeetingPlace>모임 장소</styled.MeetingPlace>
@@ -52,7 +58,11 @@ const Impromptu = () => {
             </styled.MeetingStatus>
             <styled.MeetingNumber>4/5</styled.MeetingNumber>
           </styled.MeetingBox>
-          <styled.MeetingBox>
+          <styled.MeetingBox
+            onClick={() => {
+              navigator('/matching/detail');
+            }}
+          >
             <styled.MeetingName>모임 이름</styled.MeetingName>
             <styled.MeetingDate>07.08/17:00</styled.MeetingDate>
             <styled.MeetingPlace>모임 장소</styled.MeetingPlace>
@@ -64,7 +74,11 @@ const Impromptu = () => {
             </styled.MeetingStatus>
             <styled.MeetingNumber>3/5</styled.MeetingNumber>
           </styled.MeetingBox>
-          <styled.MeetingBox>
+          <styled.MeetingBox
+            onClick={() => {
+              navigator('/matching/detail');
+            }}
+          >
             <styled.MeetingName>모임 이름</styled.MeetingName>
             <styled.MeetingDate>07.08/17:00</styled.MeetingDate>
             <styled.MeetingPlace>모임 장소</styled.MeetingPlace>
@@ -76,7 +90,11 @@ const Impromptu = () => {
             </styled.MeetingStatus>
             <styled.MeetingNumber>2/5</styled.MeetingNumber>
           </styled.MeetingBox>
-          <styled.MeetingBox>
+          <styled.MeetingBox
+            onClick={() => {
+              navigator('/matching/detail');
+            }}
+          >
             <styled.MeetingName>모임 이름</styled.MeetingName>
             <styled.MeetingDate>07.08/17:00</styled.MeetingDate>
             <styled.MeetingPlace>모임 장소</styled.MeetingPlace>
@@ -88,7 +106,11 @@ const Impromptu = () => {
             </styled.MeetingStatus>
             <styled.MeetingNumber>1/5</styled.MeetingNumber>
           </styled.MeetingBox>
-          <styled.MeetingBox>
+          <styled.MeetingBox
+            onClick={() => {
+              navigator('/matching/detail');
+            }}
+          >
             <styled.MeetingName>모임 이름</styled.MeetingName>
             <styled.MeetingDate>07.08/17:00</styled.MeetingDate>
             <styled.MeetingPlace>모임 장소</styled.MeetingPlace>
@@ -100,7 +122,11 @@ const Impromptu = () => {
             </styled.MeetingStatus>
             <styled.MeetingNumber>0/5</styled.MeetingNumber>
           </styled.MeetingBox>
-          <styled.MeetingBox>
+          <styled.MeetingBox
+            onClick={() => {
+              navigator('/matching/detail');
+            }}
+          >
             <styled.MeetingName>모임 이름</styled.MeetingName>
             <styled.MeetingDate>07.08/17:00</styled.MeetingDate>
             <styled.MeetingPlace>모임 장소</styled.MeetingPlace>
