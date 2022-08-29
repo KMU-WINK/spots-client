@@ -1,20 +1,12 @@
 import React, { useState } from 'react';
 import * as styled from './styles';
 import GlobalStyleMatchMake from './GlobalStyleMatchMake';
-import Title from './Title';
-import Date from './Date';
-import Location from './Location'
-import Condition from './Condition'
-import Type from './Type'
-import Contact from './Contact';
 import minus from '../../imgs/MatchMake/minus.svg';
 import plus from '../../imgs/MatchMake/plus.svg';
 import {Basketball, Football, Baseball, Volleyball, AFootball, Tennis, Etc} from './sports';
 import DatePicker from "react-datepicker";
 
-
 const MatchMake = () => {
-
 
     const [isValidate, setIsValidate] = useState({
         "isTitleValidate" : false,
